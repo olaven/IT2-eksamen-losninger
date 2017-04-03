@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppgave 1</title>
+	<meta name="Author" content="Jostein"/>
+	<link rel="stylesheet" type="text/css" href="Oppgave1.css">
+</head>
+<body>    
+    <audio src="musikk_mindre_fil.mp3" loop autoplay></audio>
+    
+    <div id="hovedbeholder">       
+
+        <div id="info1" class="infostil infoanimasjon">
+            <div>
+                <h2>Helt nye Ford Kuga</h2>
+                <p>Kraftig, sporty og enda mer elegant både innvendig og utvendig</p>
+                <p>Et intelligent system for firehjulsdrift tilpasser seg terrenget og kjøreforholdene på et øyeblikk</p>
+                <p>Active City Stop aktiverer automatisk bremsene ved lave hastigheter for å unngå sammenstøt og Ford SYNC gir handsfree-kontroll</p>
+            </div>            
+            <img src="kuga_front.jpg">                    
+        </div>
+
+        <div id="info2" class="infostil infoanimasjon">
+            <div>
+                <h2>Økonomisk</h2>
+                <p>Girskiftindikator med mer drivstoffeffektiv giring</p>
+                <p>Smart info-system som hjelper deg å kjøre mer effektivt</p>
+                <p>Det innovative Ford Eco Mode-systemet vurderer kontinuerlig effekten av din kjøreadferd på drivstofforbruket.</p>
+            </div>            
+            <img src="kuga_interior.jpg">                    
+        </div>        
+
+        <div id="info3" class="infostil infoanimasjon">
+            <div>
+                <h2>Unike kjøreegenskaper</h2>
+                <p>Intelligent firehjulsdrift reagerer umiddelbart og justerer seg til skiftende underlag og kjøreforhold</p>
+                <p>Dynamisk kurvekontroll maksimerer veigrepet, skjerper kjøreegenskapene og hjelper deg gjennom svingene og over ujevnheter i veien</p>
+            </div>            
+            <img src="kuga_side.jpg">                    
+        </div>
+
+        <div id="info4" class="infostil infoanimasjon">
+            <div>
+                <h2>Praktisk</h2>
+                <p>Automatisk bakluke gjør det enkelt å laste ut og inn varer, selv med hendene fulle</p>
+                <p>Ford SYNC gir handsfree-kontroll over musikk, telefonoppringninger og mye mer</p>
+            </div>            
+            <img src="kuga_bak.jpg">                    
+        </div>                 
+
+        <div id="menybeholder">        
+            <a href="#info1">1</a>
+            <a href="#info2">2</a>
+            <a href="#info3">3</a>
+            <a href="#info4">4</a>       
+        </div>
+        
+        <div id="kantlinje"></div>
+        
+    </div>      
+   
+    <!-- Starter med å vise (gå til) første info -->
+    <script>window.location.hash = "info1";</script>    
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>bilAnimasjon</title>
+    <script type="text/javascript">
+      window.onload = pageLoaded;
+      var animasjonsvindu;
+      var bilde;
+
+      var tekster;
+      var tekst1;
+      var tekst2;
+      var tekst3;
+      var tekst4;
+
+      var teksterY;
+
+      var kuga_bak;
+      var kuga_front;
+      var kuga_side;
+      var kuga_interior;
+
+      var bildeteller = 0;
+
+      /*
+      var bilder = [
+      "vedlegg/kuga_bak.jpg",
+      "vedlegg/kuga_front.jpg",
+      "vedlegg/kuga_side.jpg",
+      "vedlegg/kuga_interior.jpg"
+      ];
+      */
+      var bilder;
+
+      var hoyIndex = 1;
+
+      function pageLoaded() {
+
+        animasjonsvindu = document.getElementById("animasjonsvindu");
+        bilde = document.getElementById("bilde");
+
+        tekster = document.getElementsByClassName("tekster");
+        tekst1 = document.getElementById("tekst1");
+        tekst2 = document.getElementById("tekst2");
+        tekst3 = document.getElementById("tekst3");
+        tekst4 = document.getElementById("tekst4");
+
+        kuga_bak = document.getElementById("kuga_bak");
+        kuga_front = document.getElementById("kuga_front");
+        kuga_side = document.getElementById("kuga_side");
+        kuga_interior = document.getElementById("kuga_interior");
+
+        bilder = [
+          kuga_bak,
+          kuga_front,
+          kuga_side,
+          kuga_interior,
+        ]
+
+        setInterval(byttBilde, 1500);
+        setInterval(animerTekst, 50);
+
+      }
+      function byttBilde() {
+        if(bildeteller > bilder.length - 1){
+          bildeteller = 0;
+        }
+        bilder[bildeteller].style.zIndex = hoyIndex;
+
+        hoyIndex++;
+        bildeteller++;
+
+
+        /*
+        bilde.src = bilder[bildeteller]; //forsøker å oppdatere bildeSrc, men bildet oppdateres ikke
+        console.log(bilder[bildeteller] + "  " + bilde.src);
+        bildeteller++;*/
+      }
+      function animerTekst() {
+        console.log("animerTekst kjører");
+        teksterY += 5;
+        tekster.style.top = teksterY + "px";
+
+      }
+    </script>
+    <style media="screen">
+      #animasjonsvindu{
+        height: 400px;
+        width: 950px;
+      }
+      .bilder{
+        position: absolute;
+        width: 475px;
+      }
+      .tekster{
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="animasjonsvindu">
+      <img src="vedlegg/kuga_bak.jpg" id="kuga_bak" class="bilder">
+      <img src="vedlegg/kuga_front.jpg" id="kuga_front" class="bilder">
+      <img src="vedlegg/kuga_side.jpg" id="kuga_side" class="bilder">
+      <img src="vedlegg/kuga_interior.jpg" id="kuga_interior" class="bilder">
+      <!--
+      <img src="vedlegg/kuga_side.jpg" alt="bilde av bil" class="bilder" id="bilde">
+      -->
+      <div class="tekster">
+        <p id="tekst1">HELT NY FORD KUGA
+          Kraftig, sporty og enda mer elegant både innvendig og utvendig.
+          <br> Vi er stolte over å kunne lansere den helt nye Ford Kuga, vår mest kompetente SUV hittil.<br>
+          Nye Ford Kuga har blitt større og byr på den absolutt nyeste teknologien. <br>
+          Et intelligent system for firehjulsdrift tilpasser seg terrenget og kjøreforholdene på et øyeblikk. <br>
+          Active City Stop aktiverer automatisk bremsene ved lave hastigheter for å unngå sammenstøt, <br>
+          og Ford SYNC gir handsfree-kontroll over musikk, telefonoppringninger og mye mer.
+          Vi er også stolte over å være de første som lanserer automatisk bakluke på en SUV-modell.<br>
+          Den er imponerende enkel å betjene, selv med hendene fulle.<br>
+          Du beveger simpelthen foten under støtfangeren og bakluken åpner og lukker seg.
+        </p>
+        <p id="tekst2">Økonomi
+          Girskiftindikator med mer drivstoffeffektiv giring <br>
+          Et lys i instrumentpanelet forteller deg når du må skifte gir for å oppnå maksimal drivstoffeffektivitet.<br>
+          Det er en enkel, men effektiv måte å bidra til at bilturene blir mer økonomiske.<br>
+          Et smart info-system som hjelper deg å kjøre mer effektivt <br>
+          Det innovative Ford Eco Mode-systemet vurderer kontinuerlig effekten av din kjøreadferd på drivstofforbruket.<br>
+          Systemet leser hastighet, giring, bremsing og forventningsnivåene, pluss forholdet mellom korte og lange turer.<br>
+          Smart programvare gir deg så råd om hvordan du kan forbedre drivstofføkonomien i forhold til din personlige kjørestil.
+        </p>
+        <p id="tekst3">Kjøregenskaper
+          Umiddelbart grep på skiftende underlag
+          Kugas intelligente firehjulsdrift reagerer umiddelbart og justerer seg til skiftende underlag og kjøreforhold.<br>
+          Den sender nøyaktig riktig mengde effekt til det enkelte hjul som trenger mest veigrep.<br>
+          Og siden firehjulsdriften bare kobles inn ved behov, spares det drivstoff når underlaget er mindre krevende.<br>
+          Hvis du ønsker å se hva som skjer under hjulene dine i løpet av turen, vil en informasjonsskjerm for firehjulsdriften <br>
+          kontinuerlig vise - som et søylediagram - hvor mye effekt som sendes til hvert hjul.
+        </p>
+        <p id="tekst4">
+            Dynamisk kurvekontroll for maksimum grep <br>
+            Dynamisk kurvekontroll reagerer på veioverflaten 100 ganger pr. sekund (det er 33 ganger raskere enn øyet blunker).<br>
+            Ved å bruke denne informasjonen balanseres kontinuerlig mengde effekt og bremsing som leveres til hvert av de to forhjulene. <br>
+           Dette maksimerer veigrepet og skjerper kjøreegenskapene, og hjelper deg på den måten gjennom svingene og over ujevnheter i veien. <br>
+           Dynamisk kurvekontroll er en spissteknologi som er standard på Kuga. <br>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

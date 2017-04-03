@@ -1,0 +1,83 @@
+/* -------------------------------------------------------------------------------- */
+/* Layout og visuell stil */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#hovedbeholder {
+    width: 950px;
+    height: 400px;
+    position: relative; /* settes til relativ slik at barn med abs. pos. følger med hvis vi ønsker å flytte beholderen */
+    font-family: sans-serif;   
+}
+
+.infostil {
+    width: 930px;
+    height: 315px;
+    margin-left: 15px;    
+    position: absolute; /* abs. posisjon for å legge info-"kortene" oppå hverandre */    
+    background-color: white;    
+}
+
+.infostil > div {
+    float: left;
+    width: 40%;
+    height: inherit; 
+    overflow: auto; /* lager scrollbar hvis teksten blir for lang */       
+}
+
+.infostil > img {
+    float: left;
+    width: 55%;
+    margin-top: 20px;
+}
+
+#kantlinje {
+    width: 950px;
+    height: 400px;
+    box-sizing: border-box; /* gjør at border ikke øker total størrelse */
+    border: solid 2px;
+    position: absolute;    
+    z-index: 2; /* kantlinja skal synes over alt annet */
+    pointer-events: none; /* gjør det mulig å klikke på ting under kantlinje-div'en */
+}
+
+#menybeholder {    
+    width: 930px;
+    position: absolute;
+    top: 330px;
+    margin: 5px;
+    padding: 5px;
+    z-index: 1;
+}
+
+#menybeholder > a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-left: 5px;
+    border: solid 1px;
+    font-size: 20pt;   
+}
+
+#menybeholder > a:link {
+    text-decoration: none; /* tar bort streken under link-teksten */
+}
+
+/* -------------------------------------------------------------------------------- */
+/* interaktivitet og animasjon */
+
+.infoanimasjon {
+    left: -930px; /* start-posisjon slik at "kortet" kommer inn fra venstre */
+    z-index: 0;  /* setter z-indeks til 0 slik at de ligger bakenfor det "kortet" som er valgt med :target (klikk på link) */     
+    transition: left 1s;    
+}
+
+.infoanimasjon:target {
+    z-index: 1;  /* flytter aktivt "kort" oppå de andre */   
+    left: 0px;  /* animerer "kortet" mot høyre */ 
+}
+

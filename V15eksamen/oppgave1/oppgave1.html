@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave1</title>
+    <style media="screen">
+      #kartImg{
+        position: absolute;
+        height: 100%;/*sikrer forhåpentligvis at forholdene mellom kart og div blir likt på alle skjermer*/
+      }
+      .divs{
+        position: absolute;
+        border-style: solid;
+        height: 5%;
+        width: 5%;
+        color: blue;
+        z-index: 2;
+      }
+      #askimDiv{
+        top: 17%;
+        left: 18%;
+      }
+      #orjeDiv{
+        top: 25%;
+        left: 30%;/*vet ikke hvor dette ligger, finner ikke på kartet*/
+      }
+      #haldenDiv{
+        top: 73%;
+        left: 26.5%;
+      }
+      #fredrikstadDiv{
+        top: 60%;
+        left: 12.5%;
+      }
+      #mossDiv{
+        top: 30%;
+        left: 1%;
+      }
+    </style>
+    <script type="text/javascript">
+      window.onload = oppstart;
+
+
+      function oppstart() {
+        document.getElementById("askimDiv").onclick = visPresentasjon;
+        document.getElementById("orjeDiv").onclick = visPresentasjon;
+        document.getElementById("haldenDiv").onclick = visPresentasjon;
+        document.getElementById("fredrikstadDiv").onclick = visPresentasjon;
+        document.getElementById("mossDiv").onclick = visPresentasjon;
+      }
+      function visPresentasjon(evt) {
+        //åpne htmlside med presentasjon i ny fane basert på evt.target.id, som vil gi f.eks. "halden" og åpner "halden.html"
+        var vindu = window.open("bysider/" + evt.target.id + ".html", "_blank");
+        vindu.focus();
+      }
+    </script>
+  </head>
+  <body>
+      <div class="divs" id="askimDiv"></div>
+      <div class="divs" id="orjeDiv"></div>
+      <div class="divs" id="haldenDiv"></div>
+      <div class="divs" id="fredrikstadDiv"></div>
+      <div class="divs" id="mossDiv"></div>
+      <img src="../vedlegg_V15eksamen/stortkartostfold.gif" alt="Kart over Halden" id="kartImg">
+  </body>
+</html>

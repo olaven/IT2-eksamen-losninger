@@ -1,0 +1,18 @@
+body{
+  background-color: grey;
+  text-align: center;
+}
+#tilbudsListe{
+  display: inline-block;
+  top: 10%;
+}
+li.valgtTilbud:hover{
+  background-color: red;
+}
+li{
+  border-color: red;
+  border-style:groove;
+}
+img{
+  height: 450px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Memo</title>
+    <script type="text/javascript">
+      window.onload = oppstart;
+      var kortInnhold = [
+        "Trekant","Trekant","Trekant","Trekant",
+        "firkant","firkant","firkant","firkant",
+        "parallellogram","parallellogram","parallellogram","parallellogram",
+        "sirkel","sirkel","sirkel","sirkel",
+      ];
+
+      function oppstart() {
+        genBrett(kortInnhold, "memofelt", 4);
+      }
+      function genBrett(data, feltId, antallX) {
+        //lage HTMLelementer
+        for(i in data){
+          var nykort; //plassert utenfor loop for å væære tilgjengelig i neste loop
+          nyKort = document.createElement("div");
+          nyKort.id = "kort" + i.toString();
+          nyKort.innerHTML = data[i];
+          nyKort.style.position = "relative";
+          nyKort.style.display = "inline-block"; 
+          var kortY = -100;
+          for(i = 0; i < antallX; i++){
+            nyKort.style.top = kortY + "%";
+            console.log(nyKort);
+            document.getElementById(feltId).appendChild(nyKort);
+            kortY += 25;
+          }
+        }
+      }
+    </script>
+    <style media="screen">
+      #body{
+        background-color: rgb(20, 126, 110);
+      }
+      #memofelt{
+        background-color: rgb(21, 184, 102);
+        border-style: solid;
+        height: 400px;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="memofelt"></div>
+  </body>
+</html>

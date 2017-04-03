@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave 4</title>
+  </head>
+  <style media="screen">
+    #ramme{
+      background-color: cyan;
+      border: solid;
+      border-color: blue;
+      font-style: italic;
+      font-family: monospace;
+      font-size: 1.5em;
+    }
+  </style>
+  <script>
+    /*
+    Kjøparane kan velje mellom modellane Kuga, C-max, Focus og Mondeo. Alle modellane
+    finst i to ulike utstyrsvariantar, Trend og Titanum, og ein kan f.eks. velje mellom Kuga
+    Trend og Kuga Titanum. Alle modellane kan utstyrast med utstyrspakker som familie-,
+    førarassistent- og stilpakkar. Kjøparen kan velje å kjøpe fleire utstyrspakker til same bil.
+    */
+    window.onload = pageLoaded;
+    var modeller = {
+      kuga:{
+        trend: 401000,
+        titanium: 420000,
+        familiepakke: 1000,
+        forerassistentpakke: 10200,
+        stilpakke: 9200,
+      },
+      cMax:{
+        trend: 320000,
+        titanium: 335000,
+        familiepakke: 1000,
+        forerassistentpakke: 9400,
+        stilpakke: 3600,
+      },
+      focus:{
+        trend: 255000,
+        titanium: 325000,
+        familiepakke: 900,
+        forerassistentpakke: 12500,
+        stilpakke: 9000,
+      },
+      mondeo:{
+        trend: 281000,
+        titanium: 361000,
+        familiepakke: 1100,
+        forerassistentpakke: 9900,
+        stilpakke: 7200,
+      }
+    }
+    var tekstfelt;
+
+    var merkeInn;
+    var typeInn;
+
+    var familiepakkeInn;
+    var forerassistentpakkeInn;
+    var stilpakkeInn;
+
+    var sum = 0; //holder total pris
+
+    function pageLoaded() {
+      tekstfelt = document.getElementById("tekstfelt");
+
+      merkeInn = document.getElementById("merkeInn").value;
+      typeInn = document.getElementById("typeInn").value;
+
+      familiepakkeInn = document.getElementById("familiepakkeInn").checked;
+      forerassistentpakkeInn = document.getElementById("forerassistentpakkeInn").checked;
+      stilpakkeInn = document.getElementById("stilpakkeInn").checked;
+
+      setInterval(oppdaterPris, 50);
+      setInterval(oppdaterInput, 100);
+    }
+    function oppdaterPris() { //oppdaterer ikkke når tilstander endrer seg
+
+      sum = 0;//nullstil fra forrige beregning
+
+      //beregning av pris:
+      //merker og typer
+      if(merkeInn === "kuga"){
+        if (typeInn === "trend") {
+          sum += modeller.kuga.trend;
+        }
+        else if (typeInn === "titanium") {
+          sum += modeller.kuga.titanium;
+        }
+        //tilleggspakker
+        if (familiepakkeInn) {
+          sum += modeller.kuga.familiepakke;
+        }
+        if (forerassistentpakkeInn) {
+          sum += modeller.kuga.forerassistentpakke;
+        }
+        if (stilpakkeInn) {
+          sum += modeller.kuga.stilpakke;
+        }
+      }
+      if(merkeInn === "cMax"){
+        if (typeInn === "trend") {
+          sum += modeller.cMax.trend;
+        }
+        else if (typeInn === "titanium") {
+          sum += modeller.cMax.titanium;
+        }
+        if (familiepakkeInn) {
+          sum += modeller.cMax.familiepakke;
+        }
+        if (forerassistentpakkeInn) {
+          sum += modeller.cMax.forerassistentpakke;
+        }
+        if (stilpakkeInn) {
+          sum += modeller.cMax.stilpakke;
+        }
+      }
+      if(merkeInn === "focus"){
+        if (typeInn === "trend") {
+          sum += modeller.focus.trend;
+        }
+        else if (typeInn === "titanium") {
+          sum += modeller.focus.titanium;
+        }
+        //tilleggspakker
+        if (familiepakkeInn) {
+          sum += modeller.focus.familiepakke;
+        }
+        if (forerassistentpakkeInn) {
+          sum += modeller.focus.forerassistentpakke;
+        }
+        if (stilpakkeInn) {
+          sum += modeller.focus.stilpakke;
+        }
+      }
+      if(merkeInn === "mondeo"){
+        if (typeInn === "trend") {
+          sum += modeller.mondeo.trend;
+        }
+        else if (typeInn === "titanium") {
+          sum += modeller.mondeo.titanium;
+        }
+        //tilleggspakker
+        if (familiepakkeInn) {
+          sum += modeller.mondeo.familiepakke;
+        }
+        if (forerassistentpakkeInn) {
+          sum += modeller.mondeo.forerassistentpakke;
+        }
+        if (stilpakkeInn) {
+          sum += modeller.mondeo.stilpakke;
+        }
+      }
+      //printing av pris:
+      tekstfelt.innerHTML = "Total pris:" + "<b>" + sum + "</b>";
+    }
+    function oppdaterInput() {
+      tekstfelt = document.getElementById("tekstfelt");
+
+      merkeInn = document.getElementById("merkeInn").value;
+      typeInn = document.getElementById("typeInn").value;
+
+      familiepakkeInn = document.getElementById("familiepakkeInn").checked;
+      forerassistentpakkeInn = document.getElementById("forerassistentpakkeInn").checked;
+      stilpakkeInn = document.getElementById("stilpakkeInn").checked;
+    }
+  </script>
+  <body>
+    <div id="ramme">
+      <h1>Biloversikt:</h1>
+      Jeg vil ha en <select class="selectmeny" id="merkeInn">
+        <option value="kuga">Kuga</option>
+        <option value="cMax">C-max</option>
+        <option value="focus">Focus</option>
+        <option value="mondeo">Mondeo</option>
+      </select>
+      av type <select class="selectmeny" id="typeInn">
+        <option value="trend">Trend</option>
+        <option value="titanium">Titanium</option>
+      </select>
+      <br>
+      Jeg ønsker disse tileggspakkene: <br>
+      <ul>
+        <li>Familiepakke:<input type="checkbox" value="false" id="familiepakkeInn"></li>
+        <li>Førerassistentpakke:<input type="checkbox" value="false" id="forerassistentpakkeInn"></li>
+        <li>Stilpakke:<input type="checkbox" value="false" id="stilpakkeInn"></li>
+      </ul>
+      <p id="tekstfelt"></p>
+    </div>
+  </body>
+</html>

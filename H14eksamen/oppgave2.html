@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>oppgave 2</title>
+  </head>
+  <style media="screen">
+    body{
+      text-align: center;
+      background-color: gray;
+    }
+  </style>
+  <script type="text/javascript">
+    //start-stop: bilen starter og stopper for å spare bensin
+    //10% på bykjøring, 5% på blandet kjøring
+    //bil bruker 0,65 l/mil
+    /*
+    Rettleiing til utrekninga:
+    Normalforbruk (i kroner) = km x pris per liter x 0,65
+    Dersom brukaren har valt blanda køyring:
+    Sparte pengar (i kroner) = normalforbruk i kroner x 0,05
+    */
+    window.onload = oppstart;
+
+    var normalforbruk;
+
+    function oppstart() {
+      document.getElementById("beregnKnapp").onclick = beregnFun;
+
+      var typeInn = document.getElementById("typeInn").value;
+      var lengdeInn = parseInt(document.getElementById("lengdeInn").value);
+      var prisInn = parseInt(document.getElementById("prisInn").value);
+
+      var tekstfelt = document.getElementById("tekstfelt");
+
+    }
+    function beregnFun() {
+      normalforbruk = prisInn.value * lengdeInn.value * 0.65;
+      if (typeInn.value === "blandet") {
+        var bespart = normalforbruk * 0.05;
+        tekstfelt.innerHTML = "Du har spart: " + bespart + "kroner";
+      }
+      else if(typeInn.value === "by"){
+        var bespart = normalforbruk * 0.1;
+        tekstfelt.innerHTML = "Du har spart: " + bespart;
+      }
+      else {
+        alert("Fyll ut type kjøring")
+      }
+    }
+  </script>
+  <body>
+    <div id="inputFelt">
+      Type kjøring:
+      <select id="typeInn">
+        <option value="---">---</option>
+        <option value="blandet">Blandet kjøring</option>
+        <option value="by">Bykjøring</option>
+      </select> <br>
+      Kjørelengde: <input type="number" id="lengdeInn" min="0"> mil <br>
+      Pris per liter: <input type="number" id="prisInn" min="0"> <br>
+      <button type="button" id="beregnKnapp">Beregn</button>
+    </div>
+    <div id="outputFelt">
+      <p id="tekstfelt">Du har spart:</p>
+    </div>
+  </body>
+</html>

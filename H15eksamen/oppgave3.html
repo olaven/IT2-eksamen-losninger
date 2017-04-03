@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave 3</title>
+  </head>
+  <style media="screen">
+    h1{
+      text-align: center;
+    }
+    body{
+      background-color: grey;
+    }
+    .divRamme{
+      padding: 5px;
+      margin-right: 50%;
+      border-style: solid;
+      border-color: #2C535F;
+    }
+  </style>
+  <script type="text/javascript">
+  var fag = [
+  "Engelsk","Geografi","Historie Vg3","Kroppsøving Vg3",
+  "Naturfag","Matematikk Vg1, Vg2 (eller x fag)",
+  "Norsk hovedmål, skriftlig Vg3", "Norsk sidemål, skriftlig Vg3",
+  "Norsk, muntlig Vg3","Religion og etikk","Samfunnsfag i videregående opplæring"
+  ]
+  var karakterer = [1,2,3,4,5,6];
+
+  var registrerteFag = [];
+  var registrerteKarakterer = [];
+
+  window.onload = oppstart;
+  var leggTilBtn;
+
+  var oversiktTable;
+
+  function oppstart() {
+    //funskjoner ved oppstart
+    leggTilOptions(fag, "fagInn");
+    leggTilOptions(karakterer, "karakterInn");
+
+    leggTilBtn = document.getElementById("leggTilBtn");
+    leggTilBtn.onclick = leggTilFun;
+
+    oversiktTable = document.getElementById("oversiktTable"); //brukes i leggTilFun;
+  }
+  function leggTilFun() {
+    if(erIArr(registrerteFag, fagInn.value)){//sjekker om fag alt er registrert med registrerteFag
+      var nyTr = document.createElement("tr");
+
+      var tdFag = document.createElement("td");
+      tdFag.innerHTML = fagInn.value;
+      var tdKarakter = document.createElement("td");
+      tdKarakter.innerHTML = karakterInn.value;
+      var tdEndre = document.createElement("td");
+      tdEndre.innerHTML = "<button onclick='endreFun()'>Endre</button>";
+      var tdFjern = document.createElement("td");
+      tdFjern.innerHTML = "<button onclick='fjernFun()'>Fjern</button>";
+
+      nyTr.appendChild(tdFag);
+      nyTr.appendChild(tdKarakter);
+      nyTr.appendChild(tdEndre);
+      nyTr.appendChild(tdFjern);
+      oversiktTable.appendChild(nyTr);
+
+      registrerteFag[registrerteFag.length] = fagInn.value;
+      registrerteKarakterer[registrerteKarakterer.length] = karakterInn.value;
+
+      document.getElementById("outputSpan").innerHTML = beregnSnitt(registrerteKarakterer, registrerteFag);
+    }
+    else {
+      alert("Ikke skriv samme fag to ganger")//endre til noe penere
+    }
+  }
+  function endreFun() {
+    //SENERE: legg til noe som sjekker om karakteren er gydldig
+    var nyKar = prompt("Legg til en ny karakter");
+
+  }
+  function fjernFun() {
+    console.log("fjernFun");
+  }
+  function beregnSnitt(arrKar, arrFag) {
+    var sumKar = 0;
+    for(i in arrKar){
+      sumKar += parseInt(arrKar[i]);
+    }
+    console.log("sumKar:"+sumKar+"|arrFag.length: "+arrFag.length);
+    var snitt = (sumKar/arrFag.length);
+
+    return snitt;
+  }
+
+  function erIArr(arr, element) {//sjekker om faget alt er registrert, men returnerer alltid false. Feilsøk senere
+    if(arr.lenght = 0){
+      return true;
+    }
+    else {
+      for(i in arr){
+        if (arr[i] === element) {
+          return false;
+        }
+      }
+      return true;
+    }
+  }
+  function leggTilOptions(arr, selectTagId) {
+    var selectTag = document.getElementById(selectTagId);
+    for(i in arr){
+      var nyOption = document.createElement("option");
+      nyOption.value = arr[i];
+      nyOption.innerHTML = arr[i];
+      selectTag.appendChild(nyOption);
+    }
+  }
+  </script>
+  <body>
+    <h1>Regn ut ditt snitt!</h1> <br><br>
+    <div id="inputDiv" class="divRamme"><!--mulighet for å velge fag fra liste, samt legge inn karakter-->
+      Legg til fag: <select id="fagInn"></select> og karakter: <select id="karakterInn"></select>
+      <button type="button" id="leggTilBtn">Legg til!</button>
+    </div>
+    <div id="oversiktDiv" class="divRamme"><!-- Her skal det dukke opp tabell med fag som er lagt til, samt karakteren-->
+      <table class="tables" id="oversiktTable"></table>
+    </div>
+    <div id="outputDiv" class="divRamme">
+      Ditt snitt:<span id="outputSpan"></span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Oppgave 2</title>
+<meta name="Author" content="Jostein"/>
+<script>
+	window.onload = oppg2;
+
+	function oppg2(){
+		btnBeregn.onclick = beregn;
+	}
+
+	function beregn(){
+		var avsjekkBy = document.getElementById("radioBy").checked;
+		var prosent = (avsjekkBy ? 0.1 : 0.05);
+		var kjorelengde = parseFloat(document.getElementById("txtKjorelengde").value) * 0.1; //i mil
+		var drivstoffpris = parseFloat(document.getElementById("txtDrivstoffpris").value);
+
+		var normForbr = kjorelengde * drivstoffpris * 0.65;
+		var spart = normForbr * prosent;
+
+		document.getElementById("htmltxtResultat").innerHTML = "Du sparer kr " + spart.toFixed(0) + ",-";
+	}
+
+	</script>
+<style>body{margin:0px;padding:0px;}#hovedbeholder{width:950px;height:400px;border:solid 2px;padding-left:15px;font-family:sans-serif;box-sizing:border-box;background-color:beige}input,button{border-radius:5px;border:solid 1px;background-color:white;padding-left:5px;height:20px;}button{width:100px;cursor:pointer;}</style>
+</head>
+<body>
+<div id="hovedbeholder">
+<h1>Hvor mye sparer du med auto start-stop?</h1>
+<p>Byjøring: <input type="radio" name="kjorestil" id="radioBy" checked /></p>
+<p>Blandet kjøring:<input type="radio" name="kjorestil" id="radioBl"/></p>
+<p>Drivstoffpris (kr/l):<input type="text" id="txtDrivstoffpris"/>
+<p>Kjørelengde (km):<input type="text" id="txtKjorelengde"/></p>
+<button id="btnBeregn">Beregn</button>
+<h2 id="htmltxtResultat">Du sparer:</h2>
+</div>
+</body>
+</html>

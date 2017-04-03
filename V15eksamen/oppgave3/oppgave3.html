@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Avstandsberegner</title>
+    <script type="text/javascript">
+    var avstander = {
+      askim: {
+        askim: 0,
+        halden: 62.3,
+        fredrikstad: 58,
+        moss: 44.6,
+        orje: 33.2,
+      },
+      halden: {
+        askim: 62.3,
+        halden: 0,
+        fredrikstad: 37.9,
+        moss: 65.3,
+        orje: 60.1,
+      },
+      fredrikstad: {
+        askim: 58.8,
+        halden: 37.9,
+        fredrikstad: 0,
+        moss: 40.5,
+        orje: 78.5,
+      },
+      moss: {
+        askim: 44.6,
+        halden: 65.3,
+        fredrikstad: 40.5,
+        moss: 0,
+        orje: 77.6,
+      },
+      orje: {
+        askim: 33.2,
+        halden: 60.1,
+        fredrikstad: 78.5,
+        moss: 77.6,
+        orje: 0,
+      },
+    }
+
+    var valgteSteder = [];
+    var avstandKm = 0;
+
+      window.onload = oppstart;
+      function oppstart() {
+        document.getElementById("askim").onclick = klikket;
+        document.getElementById("halden").onclick = klikket;
+        document.getElementById("fredrikstad").onclick = klikket;
+        document.getElementById("moss").onclick = klikket;
+        document.getElementById("orje").onclick = klikket;
+      }
+      function klikket(evt) {
+        valgteSteder.push(evt.target.id);
+        var klikkSted = evt.target.id;
+
+        console.log(avstander.klikkSted.askim); //bruk araryene her
+      }
+
+    </script>
+    <style media="screen">
+      .byDivs{
+        position: absolute;
+        border-style: solid;
+        height: 5%;
+        width: 5%;
+        color: blue;
+        z-index: 2;
+      }
+      #askim{
+        top: 140px;
+        left: 220px;
+      }
+      #orje{
+        top: 25%;
+        left: 30%;/*vet ikke hvor dette ligger, finner ikke på kartet*/
+      }
+      #halden{
+        top: 485px;
+        left: 305px;
+      }
+      #fredrikstad{
+        top: 440px;
+        left: 12.5%;
+      }
+      #moss{
+        top: 225px;
+        left: 1%;
+      }
+      .container{
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="../vedlegg_V15eksamen/stortkartostfold.gif" alt="Kart over østfold" width="550px">
+      <div id="askim" class="byDivs"></div>
+      <div id="halden" class="byDivs"></div>
+      <div id="fredrikstad" class="byDivs"></div>
+      <div id="moss" class="byDivs"></div>
+      <div id="orje" class="byDivs"></div>
+    </div>
+    <div class="container">
+      <h1>Klikk på reisemålene på kartet, <br>i den rekkefølgen du vil reise dit</h1>
+    </div>
+  </body>
+</html>

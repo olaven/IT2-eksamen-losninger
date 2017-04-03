@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave 2</title>
+    <style media="screen">
+
+    </style>
+    <script type="text/javascript">
+    /*Lag en applikasjon som kan vise en bruker sannsynligheten for å komme inn på et av
+    studiene, ved å sammenlikne sin egen poengsum med poenggrensen for studiet i 2014.
+    Du skal gi brukeren mulighet til å registrere
+    - sitt eget snitt fra videregående
+    - tilleggspoeng
+    - poenggrensen for å komme inn på studiet i 2014
+    Applikasjonen skal beregne brukerens poengsum ved å ta snittkarakteren og multiplisere
+    med 10 og så legge til tilleggspoeng. Deretter skal applikasjonen sammenlikne brukerens
+    poengsum med poenggrensen for studiet i 2014. Applikasjonen skal så gi en
+    tilbakemelding på om brukeren vil komme inn på studiet eller ikke.
+    Poenggrensen til de to studiene så slik ut i 2014:
+    - lektorutdanning i historie 50
+    - lektorutdanning i språkfag/engelsk 48 */
+    window.onload = oppstart;
+
+    var historieboks;
+    var sprakboks;
+    var snittInn;
+    var tilleggInn;
+
+    var beregnBtn;
+
+    var tekstfelt;
+
+    var linjeSnitt;
+    var sprakSnitt = 48;
+    var historieSnitt = 50;
+
+    function oppstart() {
+      beregnBtn = $("beregnBtn");
+
+      tekstfelt = $("tekstfelt");
+
+      beregnBtn.onclick = beregnFun;
+
+
+    }
+    function $(id){
+      return document.getElementById(id);
+    }
+    function beregnFun() {
+      historieboks = $("historieboks");
+      sprakboks = $("sprakboks");
+      snittInn = parseFloat($("snittInn").value);
+      tilleggInn = parseInt($("tilleggInn").value);
+
+      if (sprakboks.checked) {
+        linjeSnitt = sprakSnitt;
+      }
+      if(sprakboks.checked && historieboks.checked){
+        alert("Du kan ikke sjekke to linjer samtidig!")
+        sprakboks.checked = false;
+      }
+      if(historieboks.checked) {
+        linjeSnitt = historieSnitt;
+      }
+
+      var totalSnitt = (snittInn * 10) + (tilleggInn);
+      console.log("SnittInn" + snittInn + " tilleggInn" + tilleggInn + " totalSnitt" + totalSnitt);
+
+      if (totalSnitt < linjeSnitt) {
+        tekstfelt.innerHTML = "Du kommer ikke inn."
+      }
+      else{
+        tekstfelt.innerHTML = "Du kommer inn!"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Lektorutdanning</h1>
+    Historie: <input type="checkbox" id="historieboks" checked="true">
+    Språk: <input type="checkbox" id="sprakboks"> <br>
+    Ditt karaktersnitt fra vgs: <input type="number" id="snittInn" step="0.01" min="0"><br>
+    Dine tilleggspoeng fra vgs: <input type="number" id="tilleggInn" step="0.5" min="0">
+    <button type="button" id="beregnBtn">Beregn</button>
+
+    <p id="tekstfelt"></p>
+  </body>
+</html>

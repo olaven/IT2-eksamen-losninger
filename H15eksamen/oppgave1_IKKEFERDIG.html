@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave 1</title>
+  </head>
+  <style media="screen">
+    #animasjonsvindu{
+      height: 390px;
+      width: 1000px;
+      background-color: grey;
+    }
+    .bilder{
+      position: absolute;
+      height: 390px;
+      width: 1000px;
+      visibility: hidden;
+    }
+  </style>
+  <script type="text/javascript">
+    var skoleTekster = ["kunne inspirere, utfordre og formidle kunnskap", "stort arbeidsmarked", "arbeider med fag og mennesker",
+    "samfunnsengasjement", "formidle og kommunisere og motivere","evne til å lede og samarbeide","Studieopphold i utlandet"];
+    var animasjonsvindu;
+    window.onload = oppstart;
+    function oppstart() {
+      endreBilder();
+      animerTekst(skoleTekster);
+    }
+    function endreBilder(){
+      var zIndex = 0;
+      var i = 1;
+      setInterval(function(){
+        id("bilde" + i.toString()).style.visibility = "visible";
+        if(i >= 9){
+          i = 1;
+        }
+        else {
+          zIndex++;
+          i++;
+        }
+      }, 1000)
+    }
+    function animerTekst(tekster) {
+      for(i in tekster){
+        nyTekst = id("tekst" + i.toString());
+        nyTekst.innerHTML = tekster[i] + "<br>";
+        nyTekst.style.fontSize  = 2 + "em"; 
+      }
+    }
+    function id(ret){
+      return document.getElementById(ret);
+    }
+  </script>
+  <body>
+    <div id="animasjonsvindu">
+      <div class="sprakbilderDiv">
+        <img src="vedlegg_H15/franskrelatert/franskkjøkken.jpg" class="bilder sprakbilder" alt="bilde om språk" id="bilde1">
+        <img src="vedlegg_H15/franskrelatert/franskost.jpg" class="bilder sprakbilder" alt="bilde om språk" id="bilde2">
+        <img src="vedlegg_H15/franskrelatert/franskvingård.jpg" class="bilder sprakbilder" alt="bilde om språk" id="bilde3">
+        <img src="vedlegg_H15/franskrelatert/sprakstudier.png" class="bilder sprakbilder" alt="bilde om språk" id="bilde4">
+        <img src="vedlegg_H15/franskrelatert/språkstudier.jpg" class="bilder sprakbilder" alt="bilde om språk" id="bilde5">
+      </div>
+      <div class="historiebilderDiv">
+        <img src="vedlegg_H15/historierelatert/eidsvoll.jpeg" class="bilder historiebilder" alt="bilde om historie" id="bilde6">
+        <img src="vedlegg_H15/historierelatert/sildefiske.jpg" class="bilder historiebilder" alt="bilde om historie" id="bilde7">
+        <img src="vedlegg_H15/historierelatert/vikingskip.jpg" class="bilder historiebilder" alt="bilde om historie" id="bilde8">
+        <img src="vedlegg_H15/historierelatert/frigjøringen.jpg" class="bilder historiebilder" alt="bilde om historie" id="bilde9">
+      </div>
+      <div class="teksterDiv">
+        <span id="tekst0" class="tekster"></span>
+        <span id="tekst1" class="tekster"></span>
+        <span id="tekst2" class="tekster"></span>
+        <span id="tekst3" class="tekster"></span>
+        <span id="tekst4" class="tekster"></span>
+        <span id="tekst5" class="tekster"></span>
+        <span id="tekst6" class="tekster"></span>
+        <span id="tekst7" class="tekster"></span>
+      </div>
+    </div>
+  </body>
+</html>

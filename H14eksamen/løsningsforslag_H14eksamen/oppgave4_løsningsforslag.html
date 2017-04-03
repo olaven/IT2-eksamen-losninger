@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Oppgave 2</title>
+<meta name="Author" content="Jostein"/>
+<script>
+	window.onload = oppg4;
+
+    var modellArray = [], variantArray = [], pakkeArray = [], bilpris = [], pakkepris = [];
+
+	function $(id) {
+		return document.getElementById(id);
+	}
+
+	function fyllArrayer() {
+        modellArray[0] = "Kuga";
+        modellArray[1] = "C-max";
+        modellArray[2] = "Focus";
+        modellArray[3] = "Mondeo";
+
+        variantArray[0] = "Trend";
+        variantArray[1] = "Titanium";
+
+        pakkeArray[0] = "Familiepakke";
+        pakkeArray[1] = "Førerassistentpakke";
+        pakkeArray[2] = "Stilpakke";
+
+        bilpris[0] = [401000, 420000];
+        bilpris[1] = [320000, 335000];
+        bilpris[2] = [255000, 325000];
+        bilpris[3] = [281000, 361000];
+
+        pakkepris[0] = [1000, 10200, 9200];
+        pakkepris[1] = [1000,  9400, 3600];
+        pakkepris[2] = [ 900, 12500, 9000];
+        pakkepris[3] = [1100,  9900, 7200];
+    }
+
+	function fyllLister() {
+        var  antall, opt, teller;
+
+        for (teller = 0; teller < modellArray.length; teller += 1) {
+            opt = document.createElement("option");
+            opt.text = modellArray[teller];
+            $("lstModell").add(opt, teller);
+        }
+
+        for (teller = 0; teller < variantArray.length; teller += 1) {
+            opt = document.createElement("option");
+            opt.text = variantArray[teller];
+            $("lstVariant").add(opt, teller);
+        }
+
+        for (teller = 0; teller < pakkeArray.length; teller += 1) {
+            opt = document.createElement("option");
+            opt.text = pakkeArray[teller];
+            $("lstPakke").add(opt, teller);
+        }
+    }
+
+	//----------------------------------------------------------
+	function oppg4(){
+		fyllArrayer(); //fyller arrayene med data
+		fyllLister(); //fyller listeboksene (select-boksene)
+		$("btnBeregn").onclick = beregnPris;
+	}
+
+    function beregnPris() {
+
+        var pakkepr = 0, totalpris = 0, bilpr, teller;
+
+        bilpr = bilpris[$("lstModell").selectedIndex][$("lstVariant").selectedIndex];
+
+        //Summerer prisen på alle valgte pakker
+        for (teller = 0; teller < pakkeArray.length; teller += 1) {
+            pakkepr += $("lstPakke").options[teller].selected ? pakkepris[$("lstModell").selectedIndex][teller] : 0;
+        }
+
+        totalpris = bilpr + pakkepr;
+
+        $("txtResultat").innerHTML = "Totalpris kr " + totalpris + ",-";
+    }
+
+	</script>
+<style>body{margin:0px;padding:0px;}#hovedbeholder{width:950px;height:400px;border:solid 2px;padding-left:15px;font-family:sans-serif;box-sizing:border-box;background-color:beige}label{display:block;}select{width:250px;margin-bottom:15px;}button{display:block;border-radius:5px;border:solid 1px;background-color:white;width:100px;height:20px;cursor:pointer;}</style>
+</head>
+<body>
+<div id="hovedbeholder">
+<h1>Beregn pris</h1>
+<label for="lstModell">Modell:</label>
+<select id="lstModell"></select>
+<label for="lstVariant">Variant:</label>
+<select id="lstVariant"></select>
+<label for="lstPakke">Utstyrspakke (Velg flere/fjern med Ctrl):</label>
+<select id="lstPakke" multiple size="4"></select>
+<button id="btnBeregn">Beregn</button>
+<h2 id="txtResultat">Totalpris:</h2>
+</div>
+</body>
+</html>
