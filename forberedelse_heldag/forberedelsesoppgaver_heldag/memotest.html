@@ -13,16 +13,19 @@
       ];
 
       function oppstart() {
-        genMemo(kortInnhold, "memofelt", 4, 400);//Holde alt i en funksjon slik at den kan brukes i relevante oppgaver uten at det krever for mye ekstra styr
+        genMemo(kortInnhold, "memofelt", 4, 400, "rgb(156, 52, 108)");//Holde alt i en funksjon slik at den kan brukes i relevante oppgaver uten at det krever for mye ekstra styr
       }
-      function genMemo(data, feltId, antallKortX, feltSide) {//stiler utover height, width og id gjøres i stilark
+      function genMemo(data, feltId, antallKortX, feltSide, bgFarge) {//stiler utover height, width, bgColor og id gjøres i stilark
         //lage felt
         var felt = document.createElement("div");
         felt.id = feltId;
         felt.style.width = feltSide + "px";
         felt.style.height = feltSide + "px";
+        felt.style.backgroundColor = bgFarge;
+        felt.style.border = "solid";
 
-        document.appendChild(felt);
+        console.log(felt);
+        document.body.appendChild(felt);
         //lage kort
         for(i in data){//data er et arr med alle kortverdiene. Sendes inn som et argument
           var nyttKort = document.createElement("div");
@@ -46,8 +49,7 @@
         background-color: rgb(20, 126, 110);
       }
       #memofelt{
-        background-color: rgb(21, 184, 102);
-        border-style: solid;
+
       }
     </style>
   </head>
