@@ -13,24 +13,20 @@
       ];
 
       function oppstart() {
-        genBrett(kortInnhold, "memofelt", 4);
+        genMemo(kortInnhold, "memofelt", 4, 400);
       }
-      function genBrett(data, feltId, antallX) {
-        //lage HTMLelementer
+      function genMemo(data, feltId, antallKortX, feltSide) {//sider utover height, width og id gjøres i stilark
+        //lage felt
+        var felt = document.createElement("div");
+        felt.id = feltId;
+        felt.style.width = feltSide + "px";
+        felt.style.height = feltSide + "px";
+
+        document.body.appendChild(felt);
+        //lage kort
         for(i in data){
-          var nykort; //plassert utenfor loop for å væære tilgjengelig i neste loop
-          nyKort = document.createElement("div");
-          nyKort.id = "kort" + i.toString();
-          nyKort.innerHTML = data[i];
-          nyKort.style.position = "relative";
-          nyKort.style.display = "inline-block"; 
-          var kortY = -100;
-          for(i = 0; i < antallX; i++){
-            nyKort.style.top = kortY + "%";
-            console.log(nyKort);
-            document.getElementById(feltId).appendChild(nyKort);
-            kortY += 25;
-          }
+          var nyttKort = document.createElement("div");
+
         }
       }
     </script>
@@ -41,12 +37,10 @@
       #memofelt{
         background-color: rgb(21, 184, 102);
         border-style: solid;
-        height: 400px;
-        width: 400px;
       }
     </style>
   </head>
   <body>
-    <div id="memofelt"></div>
+
   </body>
 </html>
