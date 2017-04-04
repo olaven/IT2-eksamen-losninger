@@ -45,7 +45,7 @@
           nyttKort.style.width = feltSide / antallKortX + "px";
           nyttKort.style.height = feltSide / antallKortX + "px";
           nyttKort.style.backgroundColor = kortFarge;
-          nyttKort.style.display = "inline-block";
+          nyttKort.style.display = "inline-block"; 
 
           nyttKort.onclick = function(evt){//Når brukeren velger et kort
             console.log("klikket" + evt.target.className);
@@ -53,11 +53,15 @@
             console.log(antallApnet);
             if (antallApnet <= 2) {
               evt.target.style.backgroundColor = "rgb(14, 147, 161)";
+              var bilde = "bilder/bilde1.jpg"
+              evt.target.innerHTML = "<img src='" + bilde + "' width='" + feltSide/antallKortX +"' style='position:'absolute' width='100%' height='100%'>";
             }
             else {
               for(i in document.getElementsByClassName("kort")){
+                document.getElementsByClassName("kort")[i].innerHTML = "";
+                document.getElementsByClassName("kort")[i].innerHTML = data[i];
                 document.getElementsByClassName("kort")[i].style.backgroundColor = kortFarge;
-                antallApnet = 0; 
+                antallApnet = 0;
               }
             }
           }
