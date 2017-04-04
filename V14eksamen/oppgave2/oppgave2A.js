@@ -19,7 +19,7 @@ function visDifferanse() {
   var ar2 = document.getElementById("ar2").value;
   if (ar1 < ar2) {
     storst = ar2;
-    minst = ar1
+    minst = ar1;
   }
   else {
     storst = parseInt(ar1);
