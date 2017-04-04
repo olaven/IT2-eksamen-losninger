@@ -22,7 +22,10 @@
       }
       function genMemo(data, feltId, antallKortX, feltSide, bgFarge, kortFarge, bildeArr) {//stiler utover height, width, bgColor og id gjøres i stilark
         //divvar
-        antallApnet = 0;
+        var antallApnet = 0;
+        var riktig = false;
+        var poeng = 0
+
         //lage felt
         var felt = document.createElement("div");
         felt.id = feltId;
@@ -52,32 +55,33 @@
           nyttKort.style.backgroundColor = kortFarge;
           nyttKort.style.display = "inline-block";
 
-          nyttKort.onclick = function(evt){//Når brukeren velger et kort
-            console.log("klikket" + evt.target.className);
-            antallApnet++;
-            if (antallApnet <= 2) {
-              for(i in bildeArr){
-                console.log("Kjører");
-                if(evt.target.className === bildeArr[i].tekst){
-                  console.log(bildeArr[i] + "||" + evt.target.className);
-                  evt.target.innerHTML = "<img src='" + bildeArr[i].filnavn + "' width='" + feltSide/antallKortX +"' style='position:'absolute' width='100%' height='100%'>";
-                }
-              }
-              evt.target.style.backgroundColor = "rgb(14, 147, 161)";
-              var bilde = "bilder/bilde1.jpg"
-            }
-            else {
-              for(i in document.getElementsByClassName("kort")){
-                document.getElementsByClassName("kort")[i].innerHTML = "";
-                document.getElementsByClassName("kort")[i].innerHTML = data[i];
-                document.getElementsByClassName("kort")[i].style.backgroundColor = kortFarge;
-                antallApnet = 0;
-              }
-            }
-          }
           nyttKort.innerHTML = data[i];
-          nyttKort.className = data[i]; //må kanskje behandles som loop senere fordi klasser er arrayer med elementer(?)
+          nyttKort.className = data[i]; //behandles gjennom loop senere fordi klasser er arrayer
           nyttKort.className += " kort";
+
+
+                    nyttKort.onclick = function(evt){//Når brukeren velger et kort
+                      console.log("klikket" + evt.target.className);
+                      antallApnet++;
+                      if (antallApnet <= 2) {
+                        for(i in bildeArr){
+                          console.log("Kjører");
+                          if(evt.target.className === bildeArr[i].tekst){
+                            console.log(bildeArr[i] + "||" + evt.target.className);
+                            evt.target.innerHTML = "<img src='" + bildeArr[i].filnavn + "' width='" + feltSide/antallKortX +"' style='position:'absolute' width='100%' height='100%'>";
+                          }
+                        } 
+                        evt.target.style.backgroundColor = "rgb(14, 147, 161)";
+                      }
+                      else {
+                        for(i in document.getElementsByClassName("kort")){
+                          document.getElementsByClassName("kort")[i].innerHTML = "";
+                          document.getElementsByClassName("kort")[i].innerHTML = data[i];
+                          document.getElementsByClassName("kort")[i].style.backgroundColor = kortFarge;
+                          antallApnet = 0;
+                        }
+                      }
+                    }
 
           felt.appendChild(nyttKort);
         }
