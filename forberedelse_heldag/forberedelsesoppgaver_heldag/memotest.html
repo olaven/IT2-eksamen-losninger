@@ -11,11 +11,16 @@
         "parallellogram","parallellogram","parallellogram","parallellogram",
         "sirkel","sirkel","sirkel","sirkel",
       ];
+      var bilder = [];
+      bilder.push({tekst:"Trekant kort", filnavn:"bilder/bilde1.jpg"});
+      bilder.push({tekst:"firkant kort", filnavn:"bilder/bilde2.jpg"});
+      bilder.push({tekst:"parallellogram kort", filnavn:"bilder/bilde3.jpg"});
+      bilder.push({tekst:"sirkel kort", filnavn:"bilder/bilde2.jpg"});
 
       function oppstart() {
-        genMemo(kortInnhold, "memofelt", 4, 400, "rgb(156, 52, 108)", "rgba(31, 34, 122, 0.7)");//Holde alt i en funksjon slik at den kan brukes i relevante oppgaver uten at det krever for mye ekstra styr
+        genMemo(kortInnhold, "memofelt", 4, 400, "rgb(156, 52, 108)", "rgba(31, 34, 122, 0.7)", bilder);//Holde alt i en funksjon slik at den kan brukes i relevante oppgaver uten at det krever for mye ekstra styr
       }
-      function genMemo(data, feltId, antallKortX, feltSide, bgFarge, kortFarge) {//stiler utover height, width, bgColor og id gjøres i stilark
+      function genMemo(data, feltId, antallKortX, feltSide, bgFarge, kortFarge, bildeArr) {//stiler utover height, width, bgColor og id gjøres i stilark
         //divvar
         antallApnet = 0;
         //lage felt
@@ -45,16 +50,21 @@
           nyttKort.style.width = feltSide / antallKortX + "px";
           nyttKort.style.height = feltSide / antallKortX + "px";
           nyttKort.style.backgroundColor = kortFarge;
-          nyttKort.style.display = "inline-block"; 
+          nyttKort.style.display = "inline-block";
 
           nyttKort.onclick = function(evt){//Når brukeren velger et kort
             console.log("klikket" + evt.target.className);
             antallApnet++;
-            console.log(antallApnet);
             if (antallApnet <= 2) {
+              for(i in bildeArr){
+                console.log("Kjører");
+                if(evt.target.className === bildeArr[i].tekst){
+                  console.log(bildeArr[i] + "||" + evt.target.className);
+                  evt.target.innerHTML = "<img src='" + bildeArr[i].filnavn + "' width='" + feltSide/antallKortX +"' style='position:'absolute' width='100%' height='100%'>";
+                }
+              }
               evt.target.style.backgroundColor = "rgb(14, 147, 161)";
               var bilde = "bilder/bilde1.jpg"
-              evt.target.innerHTML = "<img src='" + bilde + "' width='" + feltSide/antallKortX +"' style='position:'absolute' width='100%' height='100%'>";
             }
             else {
               for(i in document.getElementsByClassName("kort")){
