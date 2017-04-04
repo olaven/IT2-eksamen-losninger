@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Animasjonstest</title>
+    <script type="text/javascript">
+
+      var bilder = ["bilder/bilde1.jpg","bilder/bilde2.jpg","bilder/bilde3.jpg","bilder/bilde4.jpg"];
+
+      window.onload = oppstart;
+
+      function oppstart() {
+        genAnimasjon("animasjonsfelt",400,"rgb(156, 60, 83)", bilder, "Stilige bilder!", 20, 50);
+      }
+      function genAnimasjon(feltId, feltSide, feltfarge, bildeArr, tekstinnhold, feltX, feltY) {
+        /*fordi posisjoner kan basere seg på feltX og feltY, vil alle posisjoner i animasjoner
+        også stemme bedre med flere variasjoner */
+        //lage felt
+        var felt = document.getElementById(feltId);
+
+        felt.style.position = "absolute"
+        felt.style.width = feltSide + "px";
+        felt.style.height = feltSide + "px";
+        felt.style.top = feltY + "%";
+        felt.style.left = feltX + "%";
+        felt.style.backgroundColor = feltfarge;
+        felt.style.borderStyle = "solid";
+        //lage bilder
+        for(i in bildeArr){
+          var nyttBilde = document.createElement("img");
+
+          nyttBilde.style.position = "relative";
+          nyttBilde.src = bildeArr[i];
+          nyttBilde.style.height = (feltSide / 4) + "px";
+          nyttBilde.id = "bilde" + i + 1;
+
+          felt.appendChild(nyttBilde);
+
+        }
+        //lage tekst
+        var tekst = document.createElement("span");
+
+        tekst.style.position = "fixed";
+        tekst.innerHTML = tekstinnhold;
+        tekst.style.left = feltX + 2 + "%";
+        tekst.style.top = feltY + 30 + "%";
+        tekst.style.fontSize = "2em";
+        tekst.style.fontFamily = "monospace"
+        setInterval(function(){
+          for(i = 0; i < tekst.innerHTML.length; i++){
+            var colors = ["rgba(61, 67, 200, 0.81)", "rgb(142, 210, 96)", "rgb(203, 105, 219)", "rgb(244, 105, 68)"];
+            var valgtColor = colors[Math.floor(Math.random() * colors.length)];
+            tekst.style.color = valgtColor;
+          }
+        }, 2000)
+
+        felt.appendChild(tekst);
+        //animering
+
+
+
+      }
+    </script>
+  </head>
+  <body>
+    <div id="animasjonsfelt"></div>
+  </body>
+</html>
