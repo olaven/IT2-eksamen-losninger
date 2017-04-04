@@ -13,9 +13,11 @@
       ];
 
       function oppstart() {
-        genMemo(kortInnhold, "memofelt", 4, 400, "rgb(156, 52, 108)");//Holde alt i en funksjon slik at den kan brukes i relevante oppgaver uten at det krever for mye ekstra styr
+        genMemo(kortInnhold, "memofelt", 4, 400, "rgb(156, 52, 108)", "rgba(31, 34, 122, 0.7)");//Holde alt i en funksjon slik at den kan brukes i relevante oppgaver uten at det krever for mye ekstra styr
       }
-      function genMemo(data, feltId, antallKortX, feltSide, bgFarge) {//stiler utover height, width, bgColor og id gjøres i stilark
+      function genMemo(data, feltId, antallKortX, feltSide, bgFarge, kortFarge) {//stiler utover height, width, bgColor og id gjøres i stilark
+        //divvar
+        antallApnet = 0;
         //lage felt
         var felt = document.createElement("div");
         felt.id = feltId;
@@ -42,14 +44,26 @@
           var nyttKort = document.createElement("div");
           nyttKort.style.width = feltSide / antallKortX + "px";
           nyttKort.style.height = feltSide / antallKortX + "px";
-          nyttKort.style.backgroundColor = "rgba(31, 34, 122, 0.7)"
+          nyttKort.style.backgroundColor = kortFarge;
           nyttKort.style.display = "inline-block";
 
           nyttKort.onclick = function(evt){//Når brukeren velger et kort
             console.log("klikket" + evt.target.className);
+            antallApnet++;
+            console.log(antallApnet);
+            if (antallApnet <= 2) {
+              evt.target.style.backgroundColor = "rgb(14, 147, 161)";
+            }
+            else {
+              for(i in document.getElementsByClassName("kort")){
+                document.getElementsByClassName("kort")[i].style.backgroundColor = kortFarge;
+                antallApnet = 0; 
+              }
+            }
           }
           nyttKort.innerHTML = data[i];
           nyttKort.className = data[i]; //må kanskje behandles som loop senere fordi klasser er arrayer med elementer(?)
+          nyttKort.className += " kort";
 
           felt.appendChild(nyttKort);
         }
