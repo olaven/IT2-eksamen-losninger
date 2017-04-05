@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Animasjonstest</title>
+    <script type="text/javascript">
+
+      var bilder = ["bilder/bilde1.jpg","bilder/bilde2.jpg","bilder/bilde3.jpg","bilder/bilde4.jpg"];
+
+      window.onload = oppstart;
+
+      function oppstart() {
+        genAnimasjon("animasjonsfelt",50,"rgb(156, 60, 83)", bilder, "Stilige bilder!", 10, 30);
+      }
+      function genAnimasjon(feltId, feltSide, feltfarge, bildeArr, tekstinnhold, feltX, feltY) {
+        /*fordi posisjoner kan basere seg på feltX og feltY, vil alle posisjoner i animasjoner
+        også stemme bedre med flere variasjoner */
+        /*På grunn av praktiske årsaker rundt animasjon forventer programmet et array med fire bilder*/
+        //lage felt
+        var felt = document.getElementById(feltId);
+
+        felt.style.position = "absolute"
+        felt.style.width = feltSide + "%";
+        felt.style.height = feltSide + "%";
+        felt.style.top = feltY + "%";
+        felt.style.left = feltX + "%";
+        felt.style.backgroundColor = feltfarge;
+        felt.style.borderStyle = "solid";
+        //lage bilder
+        for(i in bildeArr){
+          var nyttBilde = document.createElement("img");
+
+          nyttBilde.style.position = "absolute";//sprer seg under animering
+          nyttBilde.src = bildeArr[i];
+          nyttBilde.style.height = (feltSide / 2) + "%";
+          nyttBilde.id = "bilde" + i;
+
+          felt.appendChild(nyttBilde);
+
+        }
+        //lage tekst
+        var tekst = document.createElement("span");
+
+        tekst.style.position = "fixed";
+        tekst.innerHTML = tekstinnhold;
+        tekst.style.left = feltX + 2 + "%";
+        tekst.style.top = feltY + 30 + "%";
+        tekst.style.fontSize = "2em";
+        tekst.style.fontFamily = "monospace"
+        setInterval(function(){
+          for(i in bildeArr){
+            var colors = ["rgba(61, 67, 200, 0.81)", "rgb(142, 210, 96)", "rgb(203, 105, 219)", "rgb(244, 105, 68)"];
+            var valgtColor = colors[Math.floor(Math.random() * colors.length)];
+            tekst.style.color = valgtColor;
+          }
+        }, 2000)
+
+        felt.appendChild(tekst);
+        //animering
+        ///animering av bilder
+        var bilde0 = document.getElementById("bilde0");
+        var bilde1 = document.getElementById("bilde1");
+        var bilde2 = document.getElementById("bilde2");
+        var bilde3 = document.getElementById("bilde3");
+        setInterval(function(){
+          //ANIMER BILDENE
+        }, 100)
+        /*var bilde0Y = feltY;// denne animasjonsmetoden ble lagt død fordi den var klønete å gjennomføre
+        var bilde0X = feltX;
+
+        var bilde1Y = feltY + feltSide * 0.6;
+        var bilde1X = feltX + feltSide * 0.2;
+
+        var bilde2Y = feltY + feltSide * 0.9;
+        var bilde2X = feltX + feltSide * 1.2;
+
+        var bilde3Y = feltY + feltSide * 0.4;
+        var bilde3X = feltX + feltSide * 0.6;
+
+
+        setInterval(function(){
+          //animerer bildene hver for seg slik at jeg kan variere bevegelser mer
+          //animering av bilde1
+          bilde1.style.left = bilde0X + "%";
+          bilde1.style.top = bilde0Y + "%";
+
+          if(bilde0Y < 60){
+            bilde0Y++;
+          }
+          else if(bilde0X < 65) {
+            bilde0X++;
+          }
+
+          //animering av bilde2
+          bilde2.style.left = bilde1X + "%";
+          bilde2.style.top = bilde1Y + "%";
+          //animering av bilde3
+          bilde2.style.left = bilde2X + "%";
+          bilde2.style.top = bilde2Y + "%";
+          //animering av bilde4
+          bilde3.style.left = bilde3X + "%";
+          bilde3.style.top = bilde3Y + "%";
+
+          }, 100)*/
+
+        //animering av tekst
+
+
+      }
+    </script>
+  </head>
+  <body>
+    <div id="animasjonsfelt"></div>
+  </body>
+</html>

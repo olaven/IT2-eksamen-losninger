@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>oppgave 3, registrering av bruker</title>
+    <link rel="stylesheet" href="master.css">
+
+    <script type="text/javascript">
+    var brukere = [];
+      window.onload = oppstart;
+
+      function oppstart() {
+        var navnInn = document.getElementById("navnInn");
+        var alderInn = document.getElementById("alderInn");
+
+        var tekstfelt = document.getElementById("tekstfelt");
+
+        registrerBtn.onclick = registrerFun;
+      }
+      function registrerFun() {
+        brukere.push({navn: navnInn.value, alder: parseInt(alderInn.value)});
+
+        if (parseInt(alderInn.value) <= 9 && parseInt(alderInn.value) >= 6) {
+          tekstfelt.innerHTML = "Hei, og velkommen til oss, " + brukere[brukere.length - 1].navn + "!";
+        }
+        else {
+          tekstfelt.innerHTML = "Denne siden er nok ikke beregnet på din aldersgruppe, " + brukere[brukere.length - 1].navn;
+          tekstfelt.innerHTML +=  ",<br> men du kan bruke den om du ønsker. Målgruppen er mennesker mellom 6 og 9 år"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Velkommen til siden vår!</h1>
+    <h2>Registrering foregår under</h2>
+
+    Mitt navn er <input type="text" id="navnInn">, jeg er <input type="number" id="alderInn">  år og jeg ønsker å
+    <button type="button" id="registrerBtn">registrere meg</button>
+    <br><br>
+    <p id="tekstfelt"></p>
+  </body>
+</html>
