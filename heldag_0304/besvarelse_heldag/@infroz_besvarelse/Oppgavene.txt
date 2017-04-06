@@ -1,0 +1,18 @@
+Oppgave 1 ligger i vedleggs mappa med filnavnet sirkelAnimasjon. Jeg har lagt til PSD filen også
+	  Lydfilene ligger i hovedmappa som Applaus1.mp3 og Galt.mp3 de gamle filene ligger uredigert i vedleggsmappa
+
+	  Jeg valgte å lagre filene som png, fordi det var den filtypen jeg kunne lagre alle filene som uten å måtte
+	  styre noe fryktelig med konvertering OSV. jpg kunne kanskje vært en noe bedre filtype for å spare mer plass.
+Oppgave 2
+	Animasjonen finner du i index.html i hovedmappa
+Oppgave 3
+	Ligger også i index.html i hovedmappa
+Oppgave 4
+	Finnes i Oppgave 4 mappa
+
+
+Kommentar
+
+på grunn av litt dårlig tid mot slutten fikk jeg ikke gjort en liten ekstra detalj på oppgave 3.
+Jeg tenkte jeg kunne lagre navnet til brukeren fra oppgave 3 i en cookie og hente den i Oppgave 4, sånn
+at brukeren kunne få en mer personlig tilbakemelding. 
