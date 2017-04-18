@@ -12,11 +12,6 @@ function stpetersburgFun(evt) {
   ramme.innerHTML = "<img src='stPetersburg.jpg'> "
 }
 function wtcFun() {
-  document.onkeydown = function(evt){
-    if (evt.keyCode === "27") {
-      wtcApp.style.visibility = "hidden";
-    }
-  }
   wtcApp.style.visibility = "visible";
   document.onkeydown = function(evt){
     if (evt.keyCode == "13") {
@@ -27,6 +22,11 @@ function wtcFun() {
       else {
         document.getElementById("wtcAppFelt").innerHTML = "Desverre ikke helt riktig.. - kanskje du kan dra til NYC for å lære?"
       }
+    }
+    //lukking
+    if(evt.keyCode == "27"){
+      console.log("test");
+      wtcApp.style.visibility = "hidden";
     }
   }
 }

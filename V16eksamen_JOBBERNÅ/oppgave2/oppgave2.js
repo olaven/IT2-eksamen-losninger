@@ -4,6 +4,11 @@ language[0] = {name: "amerikansk",
 q1: "'I am' or 'I is'", a1: "I am",
 q2: "'They are' or 'They is'", a2: "They are",
 q3: "'An apple' or 'A apple'", a3: "An apple"};
+
+language[1] = {name: "norsk",
+q1: "'Dem er' eller 'de er'?", a1: "De er",
+q2: "'Simen løper' eller 'Simen løpa'", a2: "Simen løper",
+q3: "'Hvilken bok' eller 'Hvem bok'", a3: "Hvilken bok"};
 //language[1] = {name:"test"} //demonastrasjon av hvordan man kan legge til flere språk med spørsmål
 
 var poeng = 0;
@@ -25,14 +30,17 @@ function startFun() {
 }
 function hentSporsmal() {
 
-  for(i in language){
-    var q1 = language[i].q1;
-    var q2 = language[i].q2;
-    var q3 = language[i].q3;
+    var ix = sprakInn.selectedIndex; 
 
-    var a1 = language[i].a1;
-    var a2 = language[i].a2;
-    var a3 = language[i].a3;
+    console.log(ix);
+
+    var q1 = language[ix].q1;
+    var q2 = language[ix].q2;
+    var q3 = language[ix].q3;
+
+    var a1 = language[ix].a1;
+    var a2 = language[ix].a2;
+    var a3 = language[ix].a3;
 
     var q1Felt = document.createElement("span");
     var q2Felt = document.createElement("span");
@@ -46,15 +54,15 @@ function hentSporsmal() {
     a2Felt.id = "a2";
     a3Felt.id = "a3";
 
-    q1Felt.innerHTML = "<br>" + language[i].q1;
+    q1Felt.innerHTML = "<br>" + language[ix].q1;
     document.getElementById("sporsmalfelt").appendChild(q1Felt);
     document.getElementById("sporsmalfelt").appendChild(a1Felt);
 
-    q2Felt.innerHTML = "<br>" + language[i].q2;
+    q2Felt.innerHTML = "<br>" + language[ix].q2;
     document.getElementById("sporsmalfelt").appendChild(q2Felt);
     document.getElementById("sporsmalfelt").appendChild(a2Felt);
 
-    q3Felt.innerHTML = "<br>" + language[i].q3;
+    q3Felt.innerHTML = "<br>" + language[ix].q3;
     document.getElementById("sporsmalfelt").appendChild(q3Felt);
     document.getElementById("sporsmalfelt").appendChild(a3Felt);
 
@@ -81,8 +89,6 @@ function hentSporsmal() {
       }
       sjekkPoeng(poeng, "tilbakemelding");
     };
-
-  }
 }
 function sjekkPoeng(p, feltId){
   if (p >= 3) {
@@ -105,6 +111,9 @@ function lagListe(arr, selectId) {
     var nyOp = document.createElement("option");
     nyOp.value = arr[i].name;
     nyOp.innerHTML = arr[i].name;
-    document.getElementById(selectId).appendChild(nyOp);
+    language[0] = {name: "amerikansk",
+    q1: "'I am' or 'I is'", a1: "I am",
+    q2: "'They are' or 'They is'", a2: "They are",
+    q3: "'An apple' or 'A apple'", a3: "An apple"};    document.getElementById(selectId).appendChild(nyOp);
   }
 }

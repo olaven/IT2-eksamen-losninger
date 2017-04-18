@@ -7,6 +7,10 @@ var type = ["Enkeltrom", "Dobbeltrom"];
 var pris = 0;
 
 var hoteller = [];
+var hotellerStPetersurg = [];
+var hotellerAmsterdam = [];
+var hotellerRoma = [];
+
 hoteller.push({navn: "Aurora", prisSommer: 590, prisVinter: 690});
 hoteller.push({navn: "Downtown", prisSommer: 660, prisVinter: 750});
 hoteller.push({navn: "City Hall", prisSommer: 450, prisVinter: 530});
@@ -28,16 +32,22 @@ hoteller.push({navn: "Locker inn", prisSommer: 560, prisVinter: 710});
 function oppstart() {
   lagListe(land, "landInn");
   lagListe(tid, "tidInn");
-  lagListeObj(hoteller, "hotellInn", "navn")
   lagListe(type, "typeInn");
+  lagListeObj(hoteller, "hotellInn", "navn")
   lagListeTall(0, 25, "antallInn");
 
-  //sjekk etter prisendringer:
-  setInterval(function(){
-      //legg til hotellPris
-  }, 1000)
 
+  //sjekk etter prisendringer:
+  document.getElementById("tidInn").onchange = function(evt){
+    //Få tilgang i objektet med evt.target.value og indexOf, men usikker på hvordan
+  };
+  //printe pris, oppdateres hvert sekund:
+  setInterval(function(){
+      //legg til hotellPris --> IKKE GJORT ENDA
+      document.getElementById("prisfelt").innerHTML = pris;
+  }, 1000)
 }
+
 function lagListeTall(min, max, selectId) {
   for(i = min; i <= max; i ++){
     var nyOp = document.createElement("option");
