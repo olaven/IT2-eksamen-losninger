@@ -30,7 +30,7 @@ function startFun() {
 }
 function hentSporsmal() {
 
-    var ix = sprakInn.selectedIndex; 
+    var ix = sprakInn.selectedIndex;
 
     console.log(ix);
 
@@ -110,10 +110,7 @@ function lagListe(arr, selectId) {
   for(i in arr){
     var nyOp = document.createElement("option");
     nyOp.value = arr[i].name;
-    nyOp.innerHTML = arr[i].name;
-    language[0] = {name: "amerikansk",
-    q1: "'I am' or 'I is'", a1: "I am",
-    q2: "'They are' or 'They is'", a2: "They are",
-    q3: "'An apple' or 'A apple'", a3: "An apple"};    document.getElementById(selectId).appendChild(nyOp);
+    nyOp.innerHTML = arr[i].name;  
+    document.getElementById(selectId).appendChild(nyOp);
   }
 }
