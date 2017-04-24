@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave 2, introanimasjon</title>
+    <style media="screen">
+
+    </style>
+    <script type="text/javascript">
+    var grader = 1;
+    var oke = 2;
+    window.onload = oppstart;
+    function oppstart() {
+      var animasjonsbilde = document.getElementById("animasjonsbilde");
+
+      animasjonsbilde.onmouseover = function(){
+        oke = 0;
+      }
+      animasjonsbilde.onmouseleave = function(){
+        oke = 2;
+      }
+
+      setInterval(function(){
+        animasjonsbilde.style.transform = "rotate(" + grader + "deg";
+        grader += oke;
+      }, 20);
+    }
+
+    </script>
+  </head>
+  <body>
+    <img src="bilder/animasjonsbilde.jpg" id="animasjonsbilde" alt="Bilde som roterer">
+  </body>
+</html>

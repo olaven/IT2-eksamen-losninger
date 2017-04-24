@@ -1,0 +1,15 @@
+/*Jeg velger å gå for mange, tydelige farger siden applikasjonen er myntet på barn*/
+h1{
+  background-color: rgb(179, 37, 122)
+}
+h2{
+  background-color: rgba(201, 188, 7, 0.74);
+}
+body{
+  text-align: center;
+  background-color: rgb(49, 221, 42);
+  font-family: monospace;
+}
+button{
+  background-color: rgb(4, 195, 208);
+}

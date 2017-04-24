@@ -1,0 +1,2 @@
+I denne mappen kommer de redigerte bildene til å ligge. Jeg tolket oppgaven slik at alle bildene hver for seg skulle
+ha 150px sider, ikke et bilde med alle figurene. Håper det var slik ment.  
