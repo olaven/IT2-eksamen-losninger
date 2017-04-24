@@ -1,9 +1,14 @@
+/*forbedringer:
+-Rotasjon for figurer lagt til i function plasserBilder()
+*/
+
 var bilder = []
 bilder.push({filnavn:"bilder/firkant.jpg", tekst:"firkant"})
 bilder.push({filnavn:"bilder/sirkel.jpg", tekst:"sirkel"})
 bilder.push({filnavn:"bilder/trekant.jpg", tekst:"trekant"})
 bilder.push({filnavn:"bilder/rombe.jpg", tekst:"rombe"})
 bilder.push({filnavn:"bilder/trapes.jpg", tekst:"trapes"})
+
 
 var teller = 0;
 
@@ -16,12 +21,12 @@ var oppgaveOversikt = [];
 var logArr = [] //push antallGjett og bilde.id, print til slutt
 window.onload = oppstart;
 function oppstart() {
-  plasserBilder(bilder, "gjettFelt");
+  plasserBilder(bilder, "gjettFelt", true);
   var stokkedeBilder = stokkArr(bilder); //hensikt er å få tilfeldige bilder for hver gjennomspilling
 
   document.getElementById("trekkBildeBtn").onclick = function trekkBilde(){
     antallGjett = 0;
-    plasserBilder(bilder, "gjettFelt");
+    plasserBilder(bilder, "gjettFelt", true);
 
     var tilfeldigBilde = document.createElement("img");
     tilfeldigBilde.id = "tilfeldigBilde";
@@ -66,7 +71,8 @@ function printOversikt(){
     location.reload();
   }
 }
-function plasserBilder(arr, feltId) {//forventer et arr med .filnavn
+function plasserBilder(arr, feltId, roteringBol) {//forventer et arr med .filnavn
+
   var tilfeldigArr = stokkArr(arr);
   document.getElementById(feltId).innerHTML = "";
   for(i in arr){
@@ -74,6 +80,12 @@ function plasserBilder(arr, feltId) {//forventer et arr med .filnavn
     nyttBilde.src = tilfeldigArr[i].filnavn;
     nyttBilde.id = tilfeldigArr[i].tekst //denne brukes til å gjenkjenne senere
     nyttBilde.onclick = bildeKlikket;
+
+    if(roteringBol){ //LAGT TIL ETTER LEVERING
+      var roteringsGrader = [0,90,180,360];
+      var nyRotasjon = roteringsGrader[Math.floor(Math.random() * roteringsGrader.length)];
+      nyttBilde.style.transform = "rotate(" + nyRotasjon + "deg";
+    }
 
     document.getElementById(feltId).appendChild(nyttBilde);
   }
