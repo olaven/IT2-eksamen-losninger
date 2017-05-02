@@ -1,6 +1,0 @@
-[0405/083926.987:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Datakanalen lukkes. (0xE8)
-[0405/091428.213:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Datakanalen lukkes. (0xE8)
-[0405/123845.263:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Datakanalen lukkes. (0xE8)
-[0411/212029.361:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Datakanalen lukkes. (0xE8)
-[0413/175700.322:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Datakanalen lukkes. (0xE8)
-[0424/134917.441:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Datakanalen lukkes. (0xE8)
