@@ -1,3 +1,12 @@
+/*Dette dokumentet skal ineholde diverse lister som jeg ønsker til programmet, men som jeg ønsker
+å skille fra hovedscriptet for å unngå rot. Scriptene knyttes sammen i oppgave3.html.
+*/
+var tider = ["sommerhalvår", "vinterhalvår"];
+var tall = [1,2,3,4,5,6,7,8,9,10];
+
+
+var totalPris = 0;
+
 var data = [];
 data[0] = {
   by: "New York",

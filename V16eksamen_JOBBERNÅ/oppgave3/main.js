@@ -2,13 +2,22 @@ window.onload = oppstart;
 
 function oppstart() {
   //lage lister
-  lagListeObj(data, "bySelect")
-}
-function lagListeObj(arr, identifier, selectId) {//forventer assosiativ array
-  for(i in arr){
-    var nyOp = document.createElement("option");
-    nyOp.innerHTML = arr[i].by;
-    nyOp.value = arr[i].by;
-    document.getElementById(selectId).appendChild(nyOp);
+  lagListeBy(data, "bySelect");
+  lagListe(tider, "tidSelect");
+  lagListe(tall, "antallDobbelSelect");
+  lagListe(tall, "antallEnkelSelect");
+  lagListe(tall, "antallDognSelect");
+  lagListe(tall, "antallPersonerSelect");
+
+  lagListeHotell(data, "hotellerSelect", "bySelect");
+  document.getElementById("bySelect").onchange = function(){
+    lagListeHotell(data, "hotellerSelect", "bySelect");
+  }
+  beregnPris("prisfelt");
+  var selects = document.getElementsByClassName("selects");
+  for(i in selects){
+    selects[i].onchange = function(){
+      beregnPris("prisfelt");
+    }
   }
 }

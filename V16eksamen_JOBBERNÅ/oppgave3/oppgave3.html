@@ -4,14 +4,28 @@
     <meta charset="utf-8">
     <title>Oppgave 3, bestillinger</title>
   </head>
-  <script type="text/javascript" src="data.js"></script>
-  <script type="text/javascript" src="main.js"></script>
   <link rel="stylesheet" href="styles.css">
   <body>
     <h1>Bestill hotell!</h1>
+    SKRIV MER I BEREGN.JS <br>
 
-    Velg by: <select id="bySelect">
+    Velg by: <select class="selects" id="bySelect"></select> <br>
+    Velg tidspunkt: <select class="selects" id="tidSelect"></select> <br>
+    Antall dobbeltrom: <select class="selects" id="antallDobbelSelect"></select> <br>
+    Antall enkeltrom: <select class="selects" id="antallEnkelSelect"></select> <br>
+    Antall døgn: <select class="selects" id="antallDognSelect"></select> <br>
+    Antall personer: <select class="selects" id="antallPersonerSelect"></select> <br>
+    Velg et hotell: <select class="selects" id="hotellerSelect"></select> <br>
+    Ønsker du kulturplass for kulturelle aktiviteter? <input type="checkbox" class="selects" id="kulturplassSelect">
+    <br> <br> <br>
 
-    </select>
+    Foreløpig pris: <span id="prisfelt"></span>
+
   </body>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="beregnPris.js"></script>
+  <script type="text/javascript" src="lagListeFunksjoner.js"></script>
+
+
 </html>
