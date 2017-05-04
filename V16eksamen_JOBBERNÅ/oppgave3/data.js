@@ -2,7 +2,7 @@
 å skille fra hovedscriptet for å unngå rot. Scriptene knyttes sammen i oppgave3.html.
 */
 var tider = ["sommerhalvår", "vinterhalvår"];
-var tall = [1,2,3,4,5,6,7,8,9,10];
+var tall = [0,1,2,3,4,5,6,7,8,9,10];
 
 
 var totalPris = 0;

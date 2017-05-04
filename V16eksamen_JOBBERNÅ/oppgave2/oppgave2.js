@@ -9,7 +9,11 @@ language[1] = {name: "norsk",
 q1: "'Dem er' eller 'de er'?", a1: "De er",
 q2: "'Simen løper' eller 'Simen løpa'", a2: "Simen løper",
 q3: "'Hvilken bok' eller 'Hvem bok'", a3: "Hvilken bok"};
-//language[1] = {name:"test"} //demonastrasjon av hvordan man kan legge til flere språk med spørsmål
+//language[3] = {name:"test"} //demonastrasjon av hvordan man kan legge til flere språk med spørsmål
+language[2] = {name: "tysk",
+q1: "Hvor ligger Tyskland? AM/EU/AS", a1: "EU",
+q2: "Hvem er statsminister i Tyskland?", a2: "Frank-Walter Steinmeier",
+q3: "Mest befolkede 'heleuropeiske' land? JA/NEI", a3: "JA"};
 
 var poeng = 0;
 
@@ -110,7 +114,7 @@ function lagListe(arr, selectId) {
   for(i in arr){
     var nyOp = document.createElement("option");
     nyOp.value = arr[i].name;
-    nyOp.innerHTML = arr[i].name;  
+    nyOp.innerHTML = arr[i].name;
     document.getElementById(selectId).appendChild(nyOp);
   }
 }
