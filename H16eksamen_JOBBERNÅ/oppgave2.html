@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave 2</title>
+  </head>
+  <style media="screen">
+    body{
+      background-color: rgb(201, 214, 80);
+      color: rgb(223, 50, 87);
+      text-align: center;
+      font-size: 3em;
+    }
+    select, button{
+      height: 3em;
+      border-style: none;
+      background-color: rgb(223, 50, 87);
+    }
+  </style>
+  <script type="text/javascript">
+    var personer = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+    var middager = [2,3];
+
+    window.onload = oppstart;
+
+    function oppstart() {
+      lagListe(middager, "middagInn");
+      lagListe(personer, "personerInn");
+
+      document.getElementById("bestillBtn").onclick = bestillFun;
+    }
+    function bestillFun() {
+      printBilder();
+      beregnPris();
+    }
+    function beregnPris() {
+      /*Prisen beregnes ut fra valgene, og du kan regne med 80 kroner per person per måltid.
+      Bestilles det matkasser til fem personer eller mer, vil prisen per person være 70 kroner. */
+      var prisPerMaltid;
+      if(parseInt(document.getElementById("personerInn").value) < 5){
+        prisPerMaltid = 80;
+      }
+      else {
+        prisPerMaltid = 70;
+      }
+      //beregne total pris
+      var middagInn = parseInt(document.getElementById("middagInn").value);
+      var personerInn = parseInt(document.getElementById("personerInn").value);
+
+      var totalPris = middagInn * personerInn * prisPerMaltid; 
+
+      printIDoc(totalPris, "prisfelt");
+    }
+    function printIDoc(value, feltId){
+      document.getElementById(feltId).innerHTML = value;
+    }
+    function printBilder() {
+      var middagerInn = parseInt(document.getElementById("middagInn").value);
+      document.getElementById("bildefelt").innerHTML = "";
+      for(i = 0; i < middagerInn; i++){
+        var nyImg = document.createElement("img");
+        nyImg.src = "vedlegg/krabbesuppe.jpg";
+        document.getElementById("bildefelt").appendChild(nyImg);
+      }
+    }
+    function lagListe(arr, feltId) {
+      for(i in arr){
+        var nyOp = document.createElement("option");
+        nyOp.value = arr[i];
+        nyOp.innerHTML = arr[i];
+        document.getElementById(feltId).appendChild(nyOp);
+      }
+    }
+  </script>
+  <body>
+    Jeg ønsker å bestille <select id="middagInn"></select> middager
+    til <select id="personerInn"></select> personer. <br>
+    <button type="button" id="bestillBtn">Bestill</button> <br>
+    Pris: <span id="prisfelt"></span> <br>
+    <span id="bildefelt"></span>
+  </body>
+</html>
