@@ -8,25 +8,32 @@
   <script type="text/javascript" src="main.js"></script>
   <link rel="stylesheet" href="master.css">
   <body>
-    <h1>Registreringer av bestilling:</h1>
-    <div class="container">
-      Antall middager: <br>
-      Antall barn: <br>
-      Antall ungdom: <br>
-      Antall voksne: <br>
-      Enter/Klikk knapp: <br>
-    </div>
-    <div class="container">
-      <input type="number" class="inputs" id="middagerInn"> <br>
-      <input type="number" class="inputs" id="barnInn"> <br>
-      <input type="number" class="inputs" id="ungdomInn"> <br>
-      <input type="number" class="inputs" id="voksneInn"> <br>
-      <button type="button" id="registrerBtn"></button>
-    </div>
-    <div id="listeFelt">
-      <table id="listeTable">
+    <div class="container" id="venstreContainer">
+      <h1>Registreringer av bestilling:</h1>
+      <div class="container">
+        Antall middager: <br>
+        Antall barn: <br>
+        Antall ungdom: <br>
+        Antall voksne: <br>
+        Enter/Klikk knapp: <br>
+      </div>
+      <div class="container">
+        <input type="number" class="inputs" id="middagerInn"> <br>
+        <input type="number" class="inputs" id="barnInn"> <br>
+        <input type="number" class="inputs" id="ungdomInn"> <br>
+        <input type="number" class="inputs" id="voksneInn"> <br>
+        <button type="button" id="registrerBtn"></button>
+      </div>
+      <div id="listeFelt">
+        <table id="listeTable">
 
-      </table>
+        </table>
+      </div>
+    </div>
+
+    <div class="container" id="hoyreContainer">
+      Behov for fisk i uke <input type="number" class="inputs" id="ukeInnBeregn" min="1" max="52">
+      <button type="button" id="beregnBehovBtn"></button>
     </div>
   </body>
 </html>
