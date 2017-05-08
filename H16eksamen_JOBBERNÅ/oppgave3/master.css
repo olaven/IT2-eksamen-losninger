@@ -1,0 +1,14 @@
+body{
+  background-color: rgb(249, 179, 181);
+  color: rgb(109, 0, 135);
+
+  font-size: 1.5em; 
+}
+.container{
+  display: inline-block;
+}
+.inputs{
+  background-color: rgb(109, 0, 135);
+  opacity: 0.4;
+  border-style: none;
+}
