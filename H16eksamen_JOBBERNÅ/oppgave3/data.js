@@ -4,7 +4,7 @@ middagtyper[2] = "Mandalstorsk i smørsaus med Holumspoteter ";
 middagtyper[3] = "Laks fra Laudal i spinat"//kun dersom middager==3
 
 var ravarer = [
-  barn = {
+  antallBarn = {
     torsk: 200,
     sei: 200,
     makrel: 200,
@@ -12,7 +12,7 @@ var ravarer = [
     krabbe: 300,
     laks: 200,
   },
-  ungdom = {
+  antallUngdom = {
     torsk: 300,
     sei: 300,
     makrel: 300,
@@ -20,7 +20,7 @@ var ravarer = [
     krabbe: 500,
     laks: 300,
   },
-  voksne = {
+  antallVoksne = {
     torsk: 350,
     sei: 350,
     makrel: 350,
@@ -34,45 +34,45 @@ var bestillingstabell = [
   {
     uke: 26,
     antallMiddager: 2,
-    barn: 1,
-    ungdom: 1,
-    voksne: 2,
+    antallBarn: 1,
+    antallUngdom: 1,
+    antallVoksne: 2,
   },
   {
     uke: 26,
     antallMiddager: 3,
-    barn: 0,
-    ungdom: 2,
-    voksne: 2,
+    antallBarn: 0,
+    antallUngdom: 2,
+    antallVoksne: 2,
   },{
     uke: 26,
     antallMiddager: 2,
-    barn: 0,
-    ungdom: 0,
-    voksne: 1,
+    antallBarn: 0,
+    antallUngdom: 0,
+    antallVoksne: 1,
   },{
     uke: 26,
     antallMiddager: 3,
-    barn: 0,
-    ungdom: 0,
-    voksne: 2,
+    antallBarn: 0,
+    antallUngdom: 0,
+    antallVoksne: 2,
   },{
     uke: 26,
     antallMiddager: 2,
-    barn: 3,
-    ungdom: 0,
-    voksne: 2,
+    antallBarn: 3,
+    antallUngdom: 0,
+    antallVoksne: 2,
   },{
     uke: 27,
     antallMiddager: 2,
-    barn: 1,
-    ungdom: 1,
-    voksne: 2,
+    antallBarn: 1,
+    antallUngdom: 1,
+    antallVoksne: 2,
   },{
     uke: 27,
     antallMiddager: 2,
-    barn: 1,
-    ungdom: 1,
-    voksne: 2,
+    antallBarn: 1,
+    antallUngdom: 1,
+    antallVoksne: 2,
   },
-]
+];

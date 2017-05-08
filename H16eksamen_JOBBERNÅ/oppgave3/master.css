@@ -1,14 +1,23 @@
 body{
   background-color: rgb(249, 179, 181);
-  color: rgb(109, 0, 135);
+  color: rgb(62, 0, 11);
 
-  font-size: 1.5em; 
+  font-size: 1.5em;
 }
 .container{
   display: inline-block;
 }
 .inputs{
   background-color: rgb(109, 0, 135);
-  opacity: 0.4;
+  color: rgb(171, 187, 236); 
   border-style: none;
+}
+button{
+  background-color: rgb(109, 0, 135);
+  border-color: rgb(48, 2, 2);
+  height: 1.2em;
+  width: 4em;
+}
+table,tr,td{
+  border-style: solid;
 }
