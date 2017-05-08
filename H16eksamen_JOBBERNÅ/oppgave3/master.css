@@ -9,11 +9,11 @@ body{
 }
 .inputs{
   background-color: rgb(109, 0, 135);
-  color: rgb(171, 187, 236); 
+  color: rgb(171, 187, 236);
   border-style: none;
 }
 button{
-  background-color: rgb(109, 0, 135);
+  background-color: rgb(135, 0, 73);
   border-color: rgb(48, 2, 2);
   height: 1.2em;
   width: 4em;

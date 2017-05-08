@@ -3,9 +3,23 @@ window.onload = function() {
     registrerFun();
     oppdaterListe();
   }
+  document.onkeydown = function(evt){
+    if(evt.keyCode === 13){
+      registrerFun();
+      oppdaterListe();
+    }
+  }
+  document.getElementById("beregnBehovBtn").onclick = function(){
+    beregnBehovFun();
+  }
   oppdaterListe();
 }
+function beregnBehovFun(uke) {
+  //pseudokode for dette (som er en del av oppgaven)
+  //ligger i filen pseudokode.txt
 
+  //HER SKAL KODEN STÅ!
+}
 function registrerFun() {
   var ukeDato = new Date();
   var ukeInn = ukeDato.getWeek(); //getWeek ligger nederst i dette dokumentet
@@ -23,11 +37,8 @@ function registrerFun() {
       antallVoksne: voksneInn,
     }
   );
-
   oppdaterListe();
-
 }
-
 function oppdaterListe() {
   //tømme dokumentet:
   document.getElementById("listeTable").innerHTML = "";
@@ -63,8 +74,6 @@ function oppdaterListe() {
     document.getElementById("listeTable").appendChild(nyTr);
   }
 }
-
-
 //hentet fra: https://weeknumber.net/how-to/javascript
 Date.prototype.getWeek = function() {
   var date = new Date(this.getTime());
