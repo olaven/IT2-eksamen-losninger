@@ -1,9 +1,9 @@
 var middagtyper = [];
-middagtyper[1] = "Sørlandsk krabbesuppe";
-middagtyper[2] = "Mandalstorsk i smørsaus med Holumspoteter ";
-middagtyper[3] = "Laks fra Laudal i spinat"//kun dersom middager==3
+middagtyper[0] = "Sørlandsk krabbesuppe";
+middagtyper[1] = "Mandalstorsk i smørsaus med Holumspoteter ";
+middagtyper[2] = "Laks fra Laudal i spinat"//kun dersom middager==3
 
-var ravarer = [
+var ravarer = [ //gram per persjon, for forskjellige grupper
   antallBarn = {
     torsk: 200,
     sei: 200,
