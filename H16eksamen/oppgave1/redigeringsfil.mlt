@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mlt LC_NUMERIC="nb_NO" version="6.5.0" title="Shotcut version 17.03.02" producer="main bin">
+  <profile description="automatic" width="856" height="480" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="854" display_aspect_den="480" frame_rate_num="30000" frame_rate_den="1001" colorspace="601"/>
+  <producer id="producer0" title="Anonymous Submission" in="00:00:00,000" out="00:00:05,038">
+    <property name="length">00:00:05,072</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/båt – Kopi.wmv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">4d3b6ae616e08f1694e070e496febb05</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer1" title="Anonymous Submission" in="00:00:00,000" out="00:00:05,038">
+    <property name="length">00:00:05,072</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/båt.wmv</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">4d3b6ae616e08f1694e070e496febb05</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer2" title="Anonymous Submission" in="00:00:00,000" out="00:00:06,073">
+    <property name="length">00:00:06,106</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/fisk_disk – Kopi.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">769a65ba6ef2dc12f023cf4ba2f66706</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer3" title="Anonymous Submission" in="00:00:00,000" out="00:00:06,073">
+    <property name="length">00:00:06,106</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/fisk_disk.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">769a65ba6ef2dc12f023cf4ba2f66706</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer4" title="Anonymous Submission" in="00:00:00,000" out="00:00:05,272">
+    <property name="length">00:00:05,305</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/fisken_fra_rusa – Kopi.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">1b576a5a6a23f2f71926aa765be10307</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer5" title="Anonymous Submission" in="00:00:00,000" out="00:00:05,272">
+    <property name="length">00:00:05,305</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/fisken_fra_rusa.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">1b576a5a6a23f2f71926aa765be10307</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer6" title="Anonymous Submission" in="00:00:00,000" out="00:00:07,508">
+    <property name="length">00:00:07,541</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/fiskeutstyr_båt – Kopi.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">2a0e20e51c33fd59a405f89d45e542de</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer7" title="Anonymous Submission" in="00:00:00,000" out="00:00:07,508">
+    <property name="length">00:00:07,541</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/fiskeutstyr_båt.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">2a0e20e51c33fd59a405f89d45e542de</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer8" title="Anonymous Submission" in="00:00:00,000" out="00:09:59,960">
+    <property name="length">00:09:59,993</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/krabbe.jpg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="loop">1</property>
+    <property name="mlt_service">pixbuf</property>
+    <property name="shotcut:hash">1eb3b4c9a866a7407fddb83123713631</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer9" title="Anonymous Submission" in="00:00:00,000" out="00:09:59,960">
+    <property name="length">00:09:59,993</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/krabbesuppe.jpg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="loop">1</property>
+    <property name="mlt_service">pixbuf</property>
+    <property name="shotcut:hash">0f6572c00dc2c1750d589b7dc2ec9b88</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer10" title="Anonymous Submission" in="00:00:00,000" out="00:09:59,960">
+    <property name="length">00:09:59,993</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/laks.jpg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="loop">1</property>
+    <property name="mlt_service">pixbuf</property>
+    <property name="shotcut:hash">d8ded310940fe2c8397a616d76a530ea</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer11" title="Anonymous Submission" in="00:00:00,000" out="00:00:54,021">
+    <property name="length">00:00:54,054</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/måker – Kopi.mp3</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="shotcut:hash">aa356c811a92b47268fb9dd1624ad584</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer12" title="Anonymous Submission" in="00:00:00,000" out="00:00:54,021">
+    <property name="length">00:00:54,054</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/måker.mp3</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="shotcut:hash">aa356c811a92b47268fb9dd1624ad584</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer13" title="Anonymous Submission" in="00:00:00,000" out="00:00:31,598">
+    <property name="length">00:00:31,632</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/måker_båt.mp3</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="shotcut:hash">feeb06a2fb6afa090652a170cf403e26</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer14" title="Anonymous Submission" in="00:00:00,000" out="00:00:20,020">
+    <property name="length">00:00:20,053</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/sløye.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">1b44984217f638bb796f7e9998aea51b</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer15" title="Anonymous Submission" in="00:00:00,000" out="00:09:59,960">
+    <property name="length">00:09:59,993</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/torsk.jpg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="loop">1</property>
+    <property name="mlt_service">pixbuf</property>
+    <property name="shotcut:hash">f23c4f121d0bec14693648ffdfda87ae</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer16" title="Anonymous Submission" in="00:00:00,000" out="00:00:05,572">
+    <property name="length">00:00:05,606</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/trekke_ruse.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">32dd99a1791f7d77b2aa5e7af3f98082</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer17" title="Anonymous Submission" in="00:00:00,000" out="00:00:31,798">
+    <property name="length">00:00:31,832</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/Trekkspill_Come_to_the_Sea.mp3</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="shotcut:hash">d3a52e883733bb7fdb791c1b5e2c2ae6</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer18" title="Anonymous Submission" in="00:00:00,000" out="00:00:10,611">
+    <property name="length">00:00:10,644</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/Øse opp suppe 6.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">0c199da6dbce88f1b970c6d65d5db113</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <playlist id="main bin" title="Shotcut version 17.03.02">
+    <property name="xml_retain">1</property>
+    <entry producer="producer0" in="00:00:00,000" out="00:00:05,038"/>
+    <entry producer="producer1" in="00:00:00,000" out="00:00:05,038"/>
+    <entry producer="producer2" in="00:00:00,000" out="00:00:06,073"/>
+    <entry producer="producer3" in="00:00:00,000" out="00:00:06,073"/>
+    <entry producer="producer4" in="00:00:00,000" out="00:00:05,272"/>
+    <entry producer="producer5" in="00:00:00,000" out="00:00:05,272"/>
+    <entry producer="producer6" in="00:00:00,000" out="00:00:07,508"/>
+    <entry producer="producer7" in="00:00:00,000" out="00:00:07,508"/>
+    <entry producer="producer8" in="00:00:00,000" out="00:00:03,971"/>
+    <entry producer="producer9" in="00:00:00,000" out="00:00:03,971"/>
+    <entry producer="producer10" in="00:00:00,000" out="00:00:03,971"/>
+    <entry producer="producer11" in="00:00:00,000" out="00:00:54,021"/>
+    <entry producer="producer12" in="00:00:00,000" out="00:00:54,021"/>
+    <entry producer="producer13" in="00:00:00,000" out="00:00:31,598"/>
+    <entry producer="producer14" in="00:00:00,000" out="00:00:20,020"/>
+    <entry producer="producer15" in="00:00:00,000" out="00:00:03,971"/>
+    <entry producer="producer16" in="00:00:00,000" out="00:00:05,572"/>
+    <entry producer="producer17" in="00:00:00,000" out="00:00:31,798"/>
+    <entry producer="producer18" in="00:00:00,000" out="00:00:10,611"/>
+  </playlist>
+  <producer id="black" in="00:00:00,000" out="00:00:13,547">
+    <property name="length">00:00:13,580</property>
+    <property name="eof">pause</property>
+    <property name="resource">black</property>
+    <property name="aspect_ratio">1</property>
+    <property name="mlt_service">color</property>
+    <property name="set.test_audio">0</property>
+  </producer>
+  <playlist id="background">
+    <entry producer="black" in="00:00:00,000" out="00:00:13,547"/>
+  </playlist>
+  <producer id="producer19" title="Anonymous Submission" in="00:00:00,000" out="00:00:07,508">
+    <property name="length">00:00:07,541</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/fiskeutstyr_båt.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">2a0e20e51c33fd59a405f89d45e542de</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:caption">fiskeutstyr_båt.mp4</property>
+    <property name="shotcut:detail">H16eksamen/vedlegg/fiskeutstyr_båt.mp4</property>
+    <property name="shotcut:comment"></property>
+    <filter id="filter0">
+      <property name="argument">Fra fjord til bord! </property>
+      <property name="geometry">50,58%/49,17%:50,12%x50,00%</property>
+      <property name="family">Verdana</property>
+      <property name="size">240</property>
+      <property name="weight">750</property>
+      <property name="style">normal</property>
+      <property name="fgcolour">#ff5500</property>
+      <property name="bgcolour">#00000000</property>
+      <property name="olcolour">#ff000000</property>
+      <property name="pad">0</property>
+      <property name="halign">right</property>
+      <property name="valign">bottom</property>
+      <property name="outline">0</property>
+      <property name="mlt_service">dynamictext</property>
+      <property name="shotcut:filter">dynamicText</property>
+    </filter>
+  </producer>
+  <producer id="producer20" title="Anonymous Submission" in="00:00:00,000" out="00:00:06,073">
+    <property name="length">00:00:06,106</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/fisk_disk – Kopi.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">769a65ba6ef2dc12f023cf4ba2f66706</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:caption">fisk_disk – Kopi.mp4</property>
+    <property name="shotcut:detail">H16eksamen/vedlegg/fisk_disk – Kopi.mp4</property>
+    <property name="shotcut:comment"></property>
+  </producer>
+  <producer id="producer21" title="Anonymous Submission" in="00:00:00,000" out="00:00:20,020">
+    <property name="length">00:00:20,053</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/sløye.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">1b44984217f638bb796f7e9998aea51b</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:caption">sløye.mp4</property>
+    <property name="shotcut:detail">H16eksamen/vedlegg/sløye.mp4</property>
+    <property name="shotcut:comment"></property>
+  </producer>
+  <producer id="producer22" title="Anonymous Submission" in="00:00:00,000" out="00:00:01,635">
+    <property name="length">00:09:59,993</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/torsk.jpg</property>
+    <property name="ttl">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="progressive">1</property>
+    <property name="seekable">1</property>
+    <property name="loop">1</property>
+    <property name="mlt_service">pixbuf</property>
+    <property name="shotcut:hash">f23c4f121d0bec14693648ffdfda87ae</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+  </producer>
+  <producer id="producer23" title="Anonymous Submission" in="00:00:00,000" out="00:00:05,572">
+    <property name="length">00:00:05,606</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/trekke_ruse.mp4</property>
+    <property name="audio_index">1</property>
+    <property name="video_index">0</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="aspect_ratio">1</property>
+    <property name="shotcut:hash">32dd99a1791f7d77b2aa5e7af3f98082</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:caption">trekke_ruse.mp4</property>
+    <property name="shotcut:detail">H16eksamen/vedlegg/trekke_ruse.mp4</property>
+    <property name="shotcut:comment"></property>
+  </producer>
+  <playlist id="playlist0">
+    <property name="shotcut:video">1</property>
+    <property name="shotcut:name">V1</property>
+    <entry producer="producer19" in="00:00:00,000" out="00:00:02,870"/>
+    <entry producer="producer20" in="00:00:00,000" out="00:00:02,536"/>
+    <entry producer="producer21" in="00:00:00,000" out="00:00:04,204"/>
+    <entry producer="producer22" in="00:00:00,000" out="00:00:01,635"/>
+    <entry producer="producer23" in="00:00:00,000" out="00:00:02,102"/>
+  </playlist>
+  <producer id="producer24" title="Anonymous Submission" in="00:00:00,000" out="00:00:54,021">
+    <property name="length">00:00:54,054</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/måker.mp3</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="shotcut:hash">aa356c811a92b47268fb9dd1624ad584</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:caption">måker.mp3</property>
+    <property name="shotcut:detail">H16eksamen/vedlegg/måker.mp3</property>
+    <property name="shotcut:comment"></property>
+  </producer>
+  <playlist id="playlist1">
+    <property name="shotcut:audio">1</property>
+    <property name="shotcut:name">A1</property>
+    <entry producer="producer24" in="00:00:00,000" out="00:00:13,547"/>
+  </playlist>
+  <producer id="producer25" title="Anonymous Submission" in="00:00:00,000" out="00:00:31,798">
+    <property name="length">00:00:31,832</property>
+    <property name="eof">pause</property>
+    <property name="resource">H16eksamen/vedlegg/Trekkspill_Come_to_the_Sea.mp3</property>
+    <property name="audio_index">0</property>
+    <property name="video_index">-1</property>
+    <property name="mute_on_pause">0</property>
+    <property name="mlt_service">avformat-novalidate</property>
+    <property name="seekable">1</property>
+    <property name="shotcut:hash">d3a52e883733bb7fdb791c1b5e2c2ae6</property>
+    <property name="global_feed">1</property>
+    <property name="xml">was here</property>
+    <property name="shotcut:caption">Trekkspill_Come_to_the_Sea.mp3</property>
+    <property name="shotcut:detail">H16eksamen/vedlegg/Trekkspill_Come_to_the_Sea.mp3</property>
+    <property name="shotcut:comment"></property>
+  </producer>
+  <playlist id="playlist2">
+    <property name="shotcut:audio">1</property>
+    <property name="shotcut:name">A2</property>
+    <entry producer="producer25" in="00:00:00,000" out="00:00:13,514"/>
+  </playlist>
+  <tractor id="tractor0" title="Shotcut version 17.03.02" global_feed="1" in="00:00:00,000" out="00:00:13,547">
+    <property name="shotcut">1</property>
+    <track producer="background"/>
+    <track producer="playlist0"/>
+    <track producer="playlist1" hide="video"/>
+    <track producer="playlist2" hide="video"/>
+    <transition id="transition0">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition1">
+      <property name="a_track">0</property>
+      <property name="b_track">1</property>
+      <property name="version">0,9</property>
+      <property name="mlt_service">frei0r.cairoblend</property>
+      <property name="disable">1</property>
+    </transition>
+    <transition id="transition2">
+      <property name="a_track">0</property>
+      <property name="b_track">2</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+    <transition id="transition3">
+      <property name="a_track">0</property>
+      <property name="b_track">3</property>
+      <property name="mlt_service">mix</property>
+      <property name="always_active">1</property>
+      <property name="sum">1</property>
+    </transition>
+  </tractor>
+</mlt>

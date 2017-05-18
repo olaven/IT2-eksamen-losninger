@@ -39,6 +39,7 @@ function lagGraf(evt) {
       ctx.lineTo(posX, (grafPunkter[i].data) / 150);
       ctx.fillText(grafPunkter[i].navn, posX, 0);
 
+      ctx.clearRect(0,0,400,400);
       ctx.stroke();
 
 

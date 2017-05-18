@@ -47,7 +47,7 @@
       var middagInn = parseInt(document.getElementById("middagInn").value);
       var personerInn = parseInt(document.getElementById("personerInn").value);
 
-      var totalPris = middagInn * personerInn * prisPerMaltid; 
+      var totalPris = middagInn * personerInn * prisPerMaltid;
 
       printIDoc(totalPris, "prisfelt");
     }
@@ -59,7 +59,7 @@
       document.getElementById("bildefelt").innerHTML = "";
       for(i = 0; i < middagerInn; i++){
         var nyImg = document.createElement("img");
-        nyImg.src = "vedlegg/krabbesuppe.jpg";
+        nyImg.src = "../vedlegg/krabbesuppe.jpg";
         document.getElementById("bildefelt").appendChild(nyImg);
       }
     }
