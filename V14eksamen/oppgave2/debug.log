@@ -1,5 +1,0 @@
-[0327/145743.748:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Datakanalen lukkes. (0xE8)
-[0328/103053.386:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Datakanalen lukkes. (0xE8)
-[0328/103647.304:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Datakanalen lukkes. (0xE8)
-[0328/103852.052:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Datakanalen lukkes. (0xE8)
-[0328/114613.334:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Datakanalen lukkes. (0xE8)

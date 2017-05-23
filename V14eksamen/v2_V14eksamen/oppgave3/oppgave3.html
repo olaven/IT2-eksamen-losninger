@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave 3, statistikk over lovbrudd</title>
+    <script type="text/javascript" src="oppgave3.js"></script>
+    <script type="text/javascript" src="oppgave3_data.js"></script>
+    <link rel="stylesheet" href="../oppgave2/oppgave2.css">
+    <style media="screen">
+      table, tr, td{/*Liten stil til oversiktstabellen -> resten er i masterstilen til oppgave2*/
+        border-bottom-style: ridge;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Registrer statistikk</h1>
+    Legg til <select id="statistikkTypeInn">
+      <option value="promillekjoring">Promillekjoring</option>
+      <option value="ulovligHastighet">Ulovlig Hastighet</option>
+    </select>
+    Legg tal antall: <input type="number" min="0" id="antallInn">
+    <br><br>
+    Hvilket år:<input type="number" min="2008" max="2012" id="arInn">
+    <button type="button" id="registrerBtn">Registrer</button>
+    <button type="button" id="regnFerrestBtn">Finn året med færrest brudd</button>
+    <br><br>
+    <div id="tekstfelt"></div>
+    <br><br>
+    -År--Prom--Ulovlig Hastighet-
+    <table id="oversikt"></table>
+  </body>
+</html>

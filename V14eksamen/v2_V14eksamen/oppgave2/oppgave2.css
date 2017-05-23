@@ -1,0 +1,19 @@
+.rammer{
+  border-style: ridge;
+  border-color: rgb(217, 48, 56);
+  background-color: rgb(26, 180, 138);
+  color: rgb(34, 2, 10);
+  font-size: 1.5em;
+  width: 55%;
+}
+.stolper{
+  display: inline-block;
+}
+input{
+  background-color: rgb(134, 92, 180);
+  border-style: none;
+}
+body{
+  background-color: rgb(106, 173, 51);
+  color: rgb(61, 54, 34); 
+}

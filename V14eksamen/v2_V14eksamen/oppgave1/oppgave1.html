@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave 1s, bil i 60-sone</title>
+    <style media="screen">
+      body{
+        background-color:rgb(125, 208, 170);  
+      }
+      #tekstfelt{
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        font-size: 2em;
+        color: rgb(112, 152, 146);
+        background-color: rgb(251, 1, 16);
+      }
+    </style>
+    <script type="text/javascript">
+      window.onload = function(){
+        //var fra html
+        var fartInn = document.getElementById("fartInn");
+        var sjekkFartBtn = document.getElementById("sjekkFartBtn");
+        //lyttere
+        document.onkeydown = function(evt){
+          if (evt.keyCode == 13) {
+            sjekkFart;
+          }
+        }
+        sjekkFartBtn.onclick = sjekkFart;
+        function sjekkFart() {
+          var lyd;//lagrer lydfil som skal dukke opp
+          var tekst; //Lagrer tekst som skal dukke opp
+          if (fartInn.value <= 60) {//godkjent fart
+            lyd = new Audio("lyder_oppgave1/godkjent.mp3");
+            tekst = "Ha en fortsatt hyggelig tur!";
+          }
+          else {//ikke godkjent fart
+            lyd = new Audio("lyder_oppgave1/ikkeGodkjent.mp3");
+            tekst = "Senk farten!";
+          }
+          lyd.play();
+          document.getElementById("tekstfelt").innerHTML = tekst;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    Hvor fort kjører bilen? <input type="number" min="0" id="fartInn"> <button type="button" id="sjekkFartBtn">Sjekk fart!</button>
+    <img src="bilder_oppgave1/bilI60Sone.png" alt="Bil i 60-sone" width="60%">
+
+    <span id="tekstfelt"></span>
+  </body>
+</html>
