@@ -1,0 +1,32 @@
+body{
+  background-color: rgb(128, 156, 167);
+  color: rgb(8, 33, 4);
+  font-family: monospace;
+}
+input, select, button{
+  border-style: solid;
+  border-color: rgb(8, 33, 4);
+  background-color:  rgb(114, 209, 121);
+}
+
+table{
+  border-style: solid;
+  border-color: inherit;
+}
+td{
+  border-bottom-style: solid;
+  border-bottom-color: rgb(24, 87, 14);
+  background-color: rgb(84, 109, 119);
+}
+.applikasjonsContainer{
+  border-style: dotted;
+  border-color: rgb(54, 133, 119);
+  background-color: rgb(114, 209, 121);
+  font-size: 1.5em;
+}
+.midtstilt{
+  text-align: center;
+}
+.inlineBlock{
+  display: inline-block;
+}

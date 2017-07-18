@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Oppgave3</title>
+    <!--Henter tabellen burkt i oppgave 2, ref. oppgavetekst-->
+    <script type="text/javascript" src="../oppgave2/oppgave2.js"></script>
+    <script type="text/javascript" src="../jsBiblio.js"></script>
+    <!--oppgave3.js reggeres til sist. På denne måten overkjrøer window.onlnoad
+    i oppgave3.js en tilsvarende window.onload i oppgave2.js-->
+    <script type="text/javascript" src="oppgave3.js"></script>
+    <link rel="stylesheet" href="../master.css">
+    <style media="screen">
+      .applikasjonsContainer{
+        width: 50%;
+      }
+      .vindInputs{
+        width: 15%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="applikasjonsContainer">
+      <h2>Registrer vindstyrke i de fire periodene:</h2>
+      <div class="inlineBlock"><!--'display:inline-block' er definert i master.css-->
+        <div class="inlineBlock">
+          Kl. 2-8:<br>
+          Kl. 8-14:<br>
+          Kl. 14-20:<br>
+          Kl. 20-2:<br>
+        </div>
+        <div class="inlineBlock">
+          <!--Ved å legge inn value slipper jeg at feltet blir tomt noen gang-->
+          <input type="number" value="0" class="vindInputs" id="inn1">m/s<br>
+          <input type="number" value="0" class="vindInputs" id="inn2">m/s<br>
+          <input type="number" value="0" class="vindInputs" id="inn3">m/s<br>
+          <input type="number" value="0" class="vindInputs" id="inn4">m/s<br>
+        </div>
+      </div>
+      <button type="button" id="registrerBtn">Klikk her for å registrere</button> <br>
+      <div id="output">
+
+      </div>
+    </div>
+  </body>
+</html>

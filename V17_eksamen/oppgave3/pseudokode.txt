@@ -1,0 +1,13 @@
+Pseudokode for oppgave3
+
+-Brukeren registrerer fire vindstyrker, som legges inn i et objekt med
+.vinstyrke1, .vindstyrke2 osv.
+-Hente inn brukerens vindstyrke fra HTML-input
+-Sammenligne hver enkelt vindstyrke i det nye vindstyrkeobjektet med
+hver sin indeks i wattProduksjon-arrayet fra oppgave2.
+-Hente ut .wattITimen for den aktuelle perioden og pushe det til et annet array
+for å holde orden.
+-Siden hver periode er 6 timer lang og det er 24(6*4) timer i et døgn, multipliseres hver
+indeks i det nye arrayet (som har wattproduksjon per time for hver av registreringene)
+med 4. Etter at de er multiplisert med 4, legges de sammmen og lagres i en variabel.
+-Den variabelen inneholder vindmøllens døgnproduksjon, som er det oppgaven spør etter.

@@ -1,0 +1,13 @@
+Programmet skal fungere på følgende måte:
+
+Brukeren skal kunne registrere vinstyrken som fant sted i løpet av
+et døgn, fordelt på fire forskjellige perioder. Periodene er mellom
+klokken to på natten og klokken åtte på morgenen, fra klokken åtte
+på morgenen til klokken to på ettermiddagen, fra klokken to på
+ettermiddagen frem til åtte på kvelden, og fra klokken åtte på
+kvelden til klokken to på natten.
+
+Applikasjonen skal bruke inndataen til å beregne hvor mange watt
+en vindmølle har produsert i løpet av det døgnet som registreres.
+Grunnlaget for den utregningen skal være tabellen som ble gitt
+i oppgave2 (../oppgave2/oppgave2.js)
